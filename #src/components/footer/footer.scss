@@ -1,0 +1,111 @@
+.footer {
+    background-color: $darkColor;
+
+    &__body {
+        padding: 1.4rem 0;
+        min-height: 11.8rem;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+        @media (max-width: $md2+px) {
+            gap: 0 2.4rem;
+            padding: 2.4rem 0 4rem;
+            align-items: flex-start;
+        }
+    }
+
+    &__logo {
+
+        
+        & img,
+        & svg {
+            display: block;
+            width: 100%;
+            max-width: 20.3rem;
+            height: auto;
+            transform: translateY(-20%);
+
+            @media (max-width: $md3+px) {
+                max-width: 15.7rem;
+            }
+        }
+
+        @media (max-width: $md2+px) {
+            margin-right: auto;
+            flex: 0 1 100%;
+
+        }
+    }
+
+    &__menu {
+        padding-left: 0;
+        margin-bottom: 0;
+        margin-left: 14.8rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3.4rem;
+        color: $textColorLigh;
+        font-size: 2.4rem;
+        line-height: 1.14em;
+        margin-right: auto;
+
+        @media (max-width: $md2+px) {
+            margin-top: 2.3rem;
+            flex: 0 1 calc(50% - 1.2rem);
+            margin-left: 0;
+            padding-left: 1.9rem;
+            flex-direction: column;
+            gap: 2.4rem;
+        }
+
+        @media (max-width: $md3+px) {
+            margin-top: 1.3rem;
+            font-size: 1.6rem;
+            padding-left: 1.5rem;
+        }
+    }
+
+    &__info {
+        color: #e0e0e0;
+        font-size: 1.6rem;
+        line-height: 1.4em;
+        font-weight: 500;
+        display: flex;
+        gap: 2rem 6rem;
+        //margin-left: 5.2rem;
+        align-items: flex-end;
+        padding-top: 0.6rem;
+
+        @media (max-width: $md2+px) {
+            padding-top: 0;
+            margin-top: 2.3rem;
+            flex: 0 1 calc(50% - 1.2rem);
+            flex-direction: column-reverse;
+            align-items: flex-start;
+            gap: 3.2rem;
+        }
+
+        @media (max-width: $md3+px) {
+            margin-top: 1.3rem;
+            font-size: 1.4rem;
+        }
+    }
+
+    &__address {
+    }
+
+    &__phone {
+    }
+
+    &__social {
+        margin-left: 5.2rem;
+
+        @media (max-width: $md2+px) {
+            margin-top: 4.2rem;
+            flex: 0 1 100%;
+            margin-left: 0;
+            padding-left: 1.9rem;
+        }
+    }
+}

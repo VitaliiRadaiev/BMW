@@ -1,0 +1,83 @@
+.trumpet-call {
+    position: relative;
+    background-color: $darkSecondColor;
+
+    @media (max-width: $md2+px) {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 5.6rem 0 3.2rem;
+        gap: 3.2rem;
+    }
+
+    &__bg {
+        @media (min-width: 992px) {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }   
+
+        & img {
+            height: 100%;
+            width: auto;
+            display: block;
+
+            @media (min-width: 992px) {
+                margin-right: -8.2rem;
+            }
+
+            @media (max-width: $md2+px) {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    &__bg-inner {
+        height: 100%;
+        width: calc(100% - 100px);
+        max-width: 156.4rem !important;
+        margin: 0 auto;
+        padding: 0;
+        display: flex;
+        justify-content: flex-end;
+    
+        @media (max-width: $md2+px) {
+            width: calc(100% - 64px);
+            max-width: none !important;
+            height: auto;
+        }
+
+        @media (max-width: $md3+px) {
+            width: 100%;
+            padding: 0 .6rem;
+        }
+    }
+
+    &__body {
+        @media (min-width: 992px) {
+            position: relative;
+            z-index: 2;
+            min-height: 46rem;
+            padding: 10.4rem 0;    
+        }
+    }
+
+    &__text {
+        max-width: 73.2rem;
+        & h2 {
+            color: $textColorLigh;
+        }
+    }
+
+    &__footer {
+        &:not(:first-child) {
+            margin-top: 6.4rem;
+
+            @media (max-width: $md3+px) {
+                margin-top: 4rem;
+            }
+        }
+    }
+}

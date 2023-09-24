@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('_head.html',{
+"title": "BMW"	
+})
+
+<body>
+	<div class="_preload-body"></div>
+	<div class="main-wrapper">
+		@@include('components/header/_header.html',{
+		"mod": ""
+		}) 
+		<main class="_page home-page">
+			<section class="promo-head">
+				<div class="promo-head__slider" data-slider="promo-head">
+					<div class="swiper">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="promo-head__bg ibg">
+									<picture>
+										<source srcset="img/photo/promo-head-bg-1.jpg" media="(min-width: 768px)" >
+										<img  src="img/photo/promo-head-bg-mob-1.jpg" alt="img">
+									</picture>
+								</div>
+								<div class="promo-head__body">
+									<div class="container">
+										<h2>
+											При покупке <br>
+											запчастей <br>
+											ТО в подарок
+										</h2>
+										<a href="#" class="btn-primary">
+											<img class="img-svg" src="img/icons/telegram.svg" alt="">
+											Записаться
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="promo-head__bg ibg">
+									<picture>
+										<source srcset="img/photo/promo-head-bg-2.jpg" media="(min-width: 768px)" >
+										<img  src="img/photo/promo-head-bg-mob-2.jpg" alt="img">
+									</picture>
+								</div>
+								<div class="promo-head__body">
+									<div class="container">
+										<h2>
+											Скидка 10% <br>
+											на первое <br>
+											обслуживание
+										</h2>
+										<a href="#" class="btn-primary">
+											<img src="img/icons/telegram.svg" alt="">
+											Записаться
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="promo-head__bg ibg">
+									<picture>
+										<source srcset="img/photo/promo-head-bg-3.jpg" media="(min-width: 768px)" >
+										<img  src="img/photo/promo-head-bg-mob-3.jpg" alt="img">
+									</picture>
+								</div>
+								<div class="promo-head__body">
+									<div class="container">
+										<h2>
+											Замена <br> колодок <br>
+											со скидкой 20%
+										</h2>
+										<a href="#" class="btn-primary">
+											<img src="img/icons/telegram.svg" alt="">
+											Записаться
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="promo-head__slider-bottom">
+							<div class="container">
+								<div class="swiper-pagination"></div>
+								<ul class="socila">
+									<li>
+										<a href="#">
+											<img class="img-svg" src="img/icons/icon_social_vk.svg" alt="">
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<img class="img-svg" src="img/icons/icon_social_youtube.svg" alt="">
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="models section-space">
+				<div class="container">
+					<h2>Выберите модель</h2>
+					<div class="models__list" data-slider="models">
+						<div class="swiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<a href="#" class="model-card">
+										<img src="img/photo/model-card-1.jpg" alt="">
+										<span class="model-card__label">BMW 1</span>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="#" class="model-card">
+										<img src="img/photo/model-card-2.jpg" alt="">
+										<span class="model-card__label">BMW X3</span>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="#" class="model-card">
+										<img src="img/photo/model-card-3.jpg" alt="">
+										<span class="model-card__label">BMW 2</span>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="#" class="model-card">
+										<img src="img/photo/model-card-4.jpg" alt="">
+										<span class="model-card__label">BMW X4</span>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="#" class="model-card">
+										<img src="img/photo/model-card-5.jpg" alt="">
+										<span class="model-card__label">BMW 3</span>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="#" class="model-card">
+										<img src="img/photo/model-card-6.jpg" alt="">
+										<span class="model-card__label">BMW X5</span>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="#" class="model-card">
+										<img src="img/photo/model-card-7.jpg" alt="">
+										<span class="model-card__label">BMW 4</span>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="#" class="model-card">
+										<img src="img/photo/model-card-8.jpg" alt="">
+										<span class="model-card__label">BMW X6</span>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="#" class="model-card">
+										<img src="img/photo/model-card-9.jpg" alt="">
+										<span class="model-card__label">BMW 5</span>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="#" class="model-card">
+										<img src="img/photo/model-card-10.jpg" alt="">
+										<span class="model-card__label">BMW X7</span>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="#" class="model-card">
+										<img src="img/photo/model-card-1.jpg" alt="">
+										<span class="model-card__label">BMW 1</span>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="#" class="model-card">
+										<img src="img/photo/model-card-2.jpg" alt="">
+										<span class="model-card__label">BMW X3</span>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="#" class="model-card">
+										<img src="img/photo/model-card-3.jpg" alt="">
+										<span class="model-card__label">BMW 2</span>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="#" class="model-card">
+										<img src="img/photo/model-card-4.jpg" alt="">
+										<span class="model-card__label">BMW X4</span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="models__buttons space-top">
+							<button class="models__slider-btn left">
+								<img class="img-svg" src="img/icons/arrow-left.svg" alt="">
+							</button>
+							<button class="models__slider-btn right">
+								<img class="img-svg" src="img/icons/arrow-right.svg" alt="">
+							</button>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="services section-space">
+				<div class="container">
+					<h2>Услуги</h2>
+					<div class="services__body space-top">
+						<div class="services__col-1">
+							<div class="services__list" data-spoller>
+								<div class="services__list-item">
+									<div class="services__list-top" data-spoller-trigger>
+										<div class="services__list-icon">
+											<img src="img/photo/services-icon-1.svg" alt="">
+										</div>
+										<div class="services__list-title text-xl">
+											Русификация BMW
+										</div>
+										<div class="services__list-label">NEW</div>
+										<div class="services__list-plus"></div>
+									</div>
+									<div class="services__list-body text-content">
+										<ul>
+											<li>
+												Замена масла (двигатель, АКПП, редукторы и раздаточная коробка)
+											</li>
+											<li>
+												Замена тормозных дисков и колодок
+											</li>
+											<li>
+												Замена тормозной жидкости и охлаждающей
+											</li>
+											<li>
+												Диагностика и ремонт подвески
+											</li>
+											<li>
+												Диагностика автомобиля
+											</li>
+											<li>
+												Мойка радиаторов
+											</li>
+											<li>
+												Компьютерная диагностика
+											</li>
+											<li>
+												Ремонт электрооборудования
+											</li>
+											<li>
+												Чистка и мойка впускного коллектора
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="services__list-item">
+									<div class="services__list-top" data-spoller-trigger>
+										<div class="services__list-icon">
+											<img src="img/photo/services-icon-2.svg" alt="">
+										</div>
+										<div class="services__list-title text-xl">
+											Дооснащение
+										</div>
+										<div class="services__list-plus"></div>
+									</div>
+									<div class="services__list-body text-content text-sm">
+										<ul>
+											<li>
+												Замена масла (двигатель, АКПП, редукторы и раздаточная коробка)
+											</li>
+											<li>
+												Замена тормозных дисков и колодок
+											</li>
+											<li>
+												Замена тормозной жидкости и охлаждающей
+											</li>
+											<li>
+												Диагностика и ремонт подвески
+											</li>
+											<li>
+												Диагностика автомобиля
+											</li>
+											<li>
+												Мойка радиаторов
+											</li>
+											<li>
+												Компьютерная диагностика
+											</li>
+											<li>
+												Ремонт электрооборудования
+											</li>
+											<li>
+												Чистка и мойка впускного коллектора
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="services__list-item">
+									<div class="services__list-top" data-spoller-trigger>
+										<div class="services__list-icon">
+											<img src="img/photo/services-icon-3.svg" alt="">
+										</div>
+										<div class="services__list-title text-xl">
+											Диагностика
+										</div>
+										<div class="services__list-plus"></div>
+									</div>
+									<div class="services__list-body text-content text-sm">
+										<ul>
+											<li>
+												Замена масла (двигатель, АКПП, редукторы и раздаточная коробка)
+											</li>
+											<li>
+												Замена тормозных дисков и колодок
+											</li>
+											<li>
+												Замена тормозной жидкости и охлаждающей
+											</li>
+											<li>
+												Диагностика и ремонт подвески
+											</li>
+											<li>
+												Диагностика автомобиля
+											</li>
+											<li>
+												Мойка радиаторов
+											</li>
+											<li>
+												Компьютерная диагностика
+											</li>
+											<li>
+												Ремонт электрооборудования
+											</li>
+											<li>
+												Чистка и мойка впускного коллектора
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="services__list-item">
+									<div class="services__list-top" data-spoller-trigger>
+										<div class="services__list-icon">
+											<img src="img/photo/services-icon-4.svg" alt="">
+										</div>
+										<div class="services__list-title text-xl">
+											Техническое обслуживание
+										</div>
+										<div class="services__list-plus"></div>
+									</div>
+									<div class="services__list-body text-content text-sm">
+										<ul>
+											<li>
+												Замена масла (двигатель, АКПП, редукторы и раздаточная коробка)
+											</li>
+											<li>
+												Замена тормозных дисков и колодок
+											</li>
+											<li>
+												Замена тормозной жидкости и охлаждающей
+											</li>
+											<li>
+												Диагностика и ремонт подвески
+											</li>
+											<li>
+												Диагностика автомобиля
+											</li>
+											<li>
+												Мойка радиаторов
+											</li>
+											<li>
+												Компьютерная диагностика
+											</li>
+											<li>
+												Ремонт электрооборудования
+											</li>
+											<li>
+												Чистка и мойка впускного коллектора
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="services__list-item">
+									<div class="services__list-top" data-spoller-trigger>
+										<div class="services__list-icon">
+											<img src="img/photo/services-icon-5.svg" alt="">
+										</div>
+										<div class="services__list-title text-xl">
+											Ремонт двигателей
+										</div>
+										<div class="services__list-plus"></div>
+									</div>
+									<div class="services__list-body text-content text-sm">
+										<ul>
+											<li>
+												Замена масла (двигатель, АКПП, редукторы и раздаточная коробка)
+											</li>
+											<li>
+												Замена тормозных дисков и колодок
+											</li>
+											<li>
+												Замена тормозной жидкости и охлаждающей
+											</li>
+											<li>
+												Диагностика и ремонт подвески
+											</li>
+											<li>
+												Диагностика автомобиля
+											</li>
+											<li>
+												Мойка радиаторов
+											</li>
+											<li>
+												Компьютерная диагностика
+											</li>
+											<li>
+												Ремонт электрооборудования
+											</li>
+											<li>
+												Чистка и мойка впускного коллектора
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="services__col-2">
+							<div class="services__list" data-spoller>
+								<div class="services__list-item">
+									<div class="services__list-top" data-spoller-trigger>
+										<div class="services__list-icon">
+											<img src="img/photo/services-icon-6.svg" alt="">
+										</div>
+										<div class="services__list-title text-xl">
+											Ремонт 
+										</div>
+										<div class="services__list-plus"></div>
+									</div>
+									<div class="services__list-body text-content text-sm">
+										<ul>
+											<li>
+												Замена масла (двигатель, АКПП, редукторы и раздаточная коробка)
+											</li>
+											<li>
+												Замена тормозных дисков и колодок
+											</li>
+											<li>
+												Замена тормозной жидкости и охлаждающей
+											</li>
+											<li>
+												Диагностика и ремонт подвески
+											</li>
+											<li>
+												Диагностика автомобиля
+											</li>
+											<li>
+												Мойка радиаторов
+											</li>
+											<li>
+												Компьютерная диагностика
+											</li>
+											<li>
+												Ремонт электрооборудования
+											</li>
+											<li>
+												Чистка и мойка впускного коллектора
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="services__list-item">
+									<div class="services__list-top" data-spoller-trigger>
+										<div class="services__list-icon">
+											<img src="img/photo/services-icon-7.svg" alt="">
+										</div>
+										<div class="services__list-title text-xl">
+											Ремонт форсунок
+										</div>
+										<div class="services__list-plus"></div>
+									</div>
+									<div class="services__list-body text-content text-sm">
+										<ul>
+											<li>
+												Замена масла (двигатель, АКПП, редукторы и раздаточная коробка)
+											</li>
+											<li>
+												Замена тормозных дисков и колодок
+											</li>
+											<li>
+												Замена тормозной жидкости и охлаждающей
+											</li>
+											<li>
+												Диагностика и ремонт подвески
+											</li>
+											<li>
+												Диагностика автомобиля
+											</li>
+											<li>
+												Мойка радиаторов
+											</li>
+											<li>
+												Компьютерная диагностика
+											</li>
+											<li>
+												Ремонт электрооборудования
+											</li>
+											<li>
+												Чистка и мойка впускного коллектора
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="services__list-item">
+									<div class="services__list-top" data-spoller-trigger>
+										<div class="services__list-icon">
+											<img src="img/photo/services-icon-8.svg" alt="">
+										</div>
+										<div class="services__list-title text-xl">
+											Ремонт ГУР
+										</div>
+										<div class="services__list-plus"></div>
+									</div>
+									<div class="services__list-body text-content text-sm">
+										<ul>
+											<li>
+												Замена масла (двигатель, АКПП, редукторы и раздаточная коробка)
+											</li>
+											<li>
+												Замена тормозных дисков и колодок
+											</li>
+											<li>
+												Замена тормозной жидкости и охлаждающей
+											</li>
+											<li>
+												Диагностика и ремонт подвески
+											</li>
+											<li>
+												Диагностика автомобиля
+											</li>
+											<li>
+												Мойка радиаторов
+											</li>
+											<li>
+												Компьютерная диагностика
+											</li>
+											<li>
+												Ремонт электрооборудования
+											</li>
+											<li>
+												Чистка и мойка впускного коллектора
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="services__list-item">
+									<div class="services__list-top" data-spoller-trigger>
+										<div class="services__list-icon">
+											<img src="img/photo/services-icon-9.svg" alt="">
+										</div>
+										<div class="services__list-title text-xl">
+											Ремонт фар и фонарей
+										</div>
+										<div class="services__list-plus"></div>
+									</div>
+									<div class="services__list-body text-content text-sm">
+										<ul>
+											<li>
+												Замена масла (двигатель, АКПП, редукторы и раздаточная коробка)
+											</li>
+											<li>
+												Замена тормозных дисков и колодок
+											</li>
+											<li>
+												Замена тормозной жидкости и охлаждающей
+											</li>
+											<li>
+												Диагностика и ремонт подвески
+											</li>
+											<li>
+												Диагностика автомобиля
+											</li>
+											<li>
+												Мойка радиаторов
+											</li>
+											<li>
+												Компьютерная диагностика
+											</li>
+											<li>
+												Ремонт электрооборудования
+											</li>
+											<li>
+												Чистка и мойка впускного коллектора
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="services__list-item">
+									<div class="services__list-top" data-spoller-trigger>
+										<div class="services__list-icon">
+											<img src="img/photo/services-icon-10.svg" alt="">
+										</div>
+										<div class="services__list-title text-xl">
+											Ремонт АБС
+										</div>
+										<div class="services__list-plus"></div>
+									</div>
+									<div class="services__list-body text-content text-sm">
+										<ul>
+											<li>
+												Замена масла (двигатель, АКПП, редукторы и раздаточная коробка)
+											</li>
+											<li>
+												Замена тормозных дисков и колодок
+											</li>
+											<li>
+												Замена тормозной жидкости и охлаждающей
+											</li>
+											<li>
+												Диагностика и ремонт подвески
+											</li>
+											<li>
+												Диагностика автомобиля
+											</li>
+											<li>
+												Мойка радиаторов
+											</li>
+											<li>
+												Компьютерная диагностика
+											</li>
+											<li>
+												Ремонт электрооборудования
+											</li>
+											<li>
+												Чистка и мойка впускного коллектора
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="services__footer space-top link-arrow-wrap">
+						<a href="#" class="link-arrow-right">
+							Все услуги
+							<img class="img-svg" src="img/icons/arrow-right.svg" alt="">
+						</a>
+					</div>
+				</div>
+			</section>
+
+			@@include('components/trumpet-call/_trumpet-call.html')
+
+			<section class="reviews section-space">
+				<div class="container">
+					<div class="reviews__head">
+						<h2>Отзывы</h2>
+						<img src="img/photo/Yandex.png" alt="">
+					</div>
+					<div class="reviews__body space-top">
+						<div class="review-card">
+							<div class="review-card__head">
+								<div class="review-card__photo">
+									<img src="img/photo/review-card-1.jpg" alt="">
+								</div>
+								<div>
+									<div class="review-card__name">Александр К.</div>
+									<div class="review-card__date">27.03.2023</div>
+								</div>
+							</div>
+							<div class="review-card__stars">
+								@@include('components/rating/_rating.html', { "value": "4" })
+							</div>
+							<div class="review-card__text">
+								Отличный сервис! Самое крутое - подход к клиентам Продавали авто, покупатель решил проверить в этом сервисе Я как продавец своего авто был приятно удивлён грамотной диагностики авто и притным ожиданием
+							</div>
+						</div>
+						<div class="review-card">
+							<div class="review-card__head">
+								<div class="review-card__photo">
+									<img src="img/photo/review-card-2.jpg" alt="">
+								</div>
+								<div>
+									<div class="review-card__name">Александр Лоханев</div>
+									<div class="review-card__date">26.04.2023</div>
+								</div>
+							</div>
+							<div class="review-card__stars">
+								@@include('components/rating/_rating.html', { "value": "4.5" })
+							</div>
+							<div class="review-card__text">
+								Обзвонил 3 специализированных сервиса бмв , никто не слышал про мою проблему , приехав в сервис bmwyou сразу нашли и устранили проблему , быстро , качественно и не дорого , всем владельцам бмв рекомендую 👍👍👍
+							</div>
+						</div>
+						<div class="review-card">
+							<div class="review-card__head">
+								<div class="review-card__photo">
+									<img src="img/photo/review-card-3.jpg" alt="">
+								</div>
+								<div>
+									<div class="review-card__name">
+										Геннадий Иванов
+									</div>
+									<div class="review-card__date">
+										24.10.2022
+									</div>
+								</div>
+							</div>
+							<div class="review-card__stars">
+								@@include('components/rating/_rating.html', { "value": "5" })
+							</div>
+							<div class="review-card__text">
+								Как любят шутить, что с появлением в твоей жизни машины из Баварии - ты прописываешься в сервисе. Это правда от части. Однажды приехав сюда для ремонта и дождавшись машину после него - ты рискуешь попасть в следующий раз только на плановое ТО. А к этому моменту уже соскучишься по общению с ребятами и атмосфере у них.
+							</div>
+						</div>
+						<div class="review-card">
+							<div class="review-card__head">
+								<div class="review-card__photo">
+									<img src="img/photo/review-card-4.jpg" alt="">
+								</div>
+								<div>
+									<div class="review-card__name">
+										Charlie
+									</div>
+									<div class="review-card__date">
+										27.03.2023
+									</div>
+								</div>
+							</div>
+							<div class="review-card__stars">
+								@@include('components/rating/_rating.html', { "value": "3" })
+							</div>
+							<div class="review-card__text">
+								Делал мелочь по кузову, но впечатления исключительно положительные. Ребята точно с руками и правильным подходом к делу! Ценник супер гуманный).
+							</div>
+						</div>
+					</div>
+					<div class="reviews__footer space-top link-arrow-wrap">
+						<a href="#" class="link-arrow-right">
+							Все отзывы
+							<img class="img-svg" src="img/icons/arrow-right.svg" alt="">
+						</a>
+					</div>
+				</div>
+			</section>
+
+			<section class="gallery section-space">
+				<div class="container">
+					<h2>Как мы работаем</h2>
+					<div class="gallery__list space-top">
+						<div class="gallery__list-item">
+							<a href="img/photo/gallery-img-lg-1.jpg" data-fancybox="gallery-1">
+								<img src="img/photo/gallery-img-sm-1.jpg" alt="">
+							</a>
+						</div>
+						<div class="gallery__list-item">
+							<a href="img/photo/gallery-img-lg-2.jpg" data-fancybox="gallery-1">
+								<img src="img/photo/gallery-img-sm-2.jpg" alt="">
+							</a>
+						</div>
+						<div class="gallery__list-item">
+							<a href="img/photo/gallery-img-lg-3.jpg" data-fancybox="gallery-1">
+								<img src="img/photo/gallery-img-sm-3.jpg" alt="">
+							</a>
+						</div>
+						<div class="gallery__list-item">
+							<a href="img/photo/gallery-img-lg-4.jpg" data-fancybox="gallery-1">
+								<img src="img/photo/gallery-img-sm-4.jpg" alt="">
+							</a>
+						</div>
+						<div class="gallery__list-item">
+							<a href="img/photo/gallery-img-lg-5.jpg" data-fancybox="gallery-1">
+								<img src="img/photo/gallery-img-sm-5.jpg" alt="">
+							</a>
+						</div>
+						<div class="gallery__list-item">
+							<a href="img/photo/gallery-img-lg-6.jpg" data-fancybox="gallery-1">
+								<img src="img/photo/gallery-img-sm-6.jpg" alt="">
+							</a>
+						</div>
+						<div class="gallery__list-item">
+							<a href="img/photo/gallery-img-lg-7.jpg" data-fancybox="gallery-1">
+								<img src="img/photo/gallery-img-sm-7.jpg" alt="">
+							</a>
+						</div>
+						<div class="gallery__list-item">
+							<a href="img/photo/gallery-img-lg-8.jpg" data-fancybox="gallery-1">
+								<img src="img/photo/gallery-img-sm-8.jpg" alt="">
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="map section-space">
+				<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A2db3e8ff124481e7763d3527bf4ffde0b39240367e433371b0bce6c18ac8017f&amp;source=constructor" width="100%" height="440" frameborder="0"></iframe>
+			</section>
+		</main>
+
+		@@include('components/footer/_footer.html',{})
+	</div>
+</body>
+
+</html>

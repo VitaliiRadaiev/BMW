@@ -1,0 +1,14 @@
+.map {
+    height: 80vh;
+    min-height: 34.8rem;
+    background-color: rgba($secondColor, 0.35);
+
+    @media (max-width: $md3+px) {
+        height: 34.8rem;
+    }
+
+    & iframe {
+        height: 100%;
+        width: 100%;
+    }
+}
