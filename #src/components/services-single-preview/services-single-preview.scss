@@ -1,0 +1,43 @@
+.services-single-preview {
+
+    &__inner {
+        display: grid;
+        gap: 6rem;
+
+        @media (max-width: $md3+px) {
+            gap: 4rem;
+        }
+    }
+    &__title {
+        display: flex;
+        gap: 3rem;
+        align-items: center;
+        font-size: 6.4rem;
+        font-weight: 500;
+        line-height: 1.2em;
+
+        @media (max-width: $md3+px) {
+            flex-direction: column;
+            gap: 1.6rem;
+            align-items: initial;
+            font-size: 3.2rem;
+        }
+
+        & img, & svg {
+            flex: 0 0 auto;
+            width: 10rem;
+            height: auto;
+
+            @media (max-width: $md3+px) {
+                width: 4.8rem;
+            }
+        }
+    }
+
+    &__text {
+
+    }
+
+    &__bottom {
+    }
+}

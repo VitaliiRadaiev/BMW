@@ -41,9 +41,25 @@
 @import "../components/rating/rating";
 @import "../components/gallery/gallery";
 @import "../components/map/map";
+@import "../components/breadcrumbs/breadcrumbs";
+@import "../components/auto-preview/auto-preview";
+@import "../components/services-single-preview/services-single-preview";
+@import "../components/type-of-works/type-of-works";
+@import "../components/prices/prices";
+@import "../components/advantages/advantages";
+@import "../components/blog/blog";
+@import "../components/contacts/contacts";
+@import "../components/gallery-secondary/gallery-secondary";
 // ==== // components BLOCKS =====================================================
 
 // ==== PAGES =====================================================
 @import "pages/home";
+@import "pages/services";
+@import "pages/auto-single";
+@import "pages/services-single";
+@import "pages/blog";
+@import "pages/reviews";
+@import "pages/blog-single";
+@import "pages/contacts";
 // ==== AND PAGES =====================================================
 

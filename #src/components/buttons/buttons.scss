@@ -51,6 +51,43 @@
     }
 }
 
+.btn-secondary {
+    display: inline-flex;
+    border: 1px solid currentColor;
+    color: $textColor;
+    border-radius: 1.6rem;
+    padding: 2rem 4rem 1.4rem;
+    min-height: 6.5rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 500;
+    line-height: 1.14em;
+    background-color: transparent !important;
+    transition: color .2s ease;
+
+    @media (max-width: $md3+px) {
+        font-size: 1.8rem;
+        min-height: 5.3rem;
+        padding: 1.4rem 4rem 1rem;
+    }
+
+    @media #{$mouse-device} {
+        &:hover {
+            color: $hover;
+        }
+    }
+
+    &:active {
+        box-shadow: none;
+        transform: scale(0.98);
+    }
+
+    &:focus {
+        box-shadow: none !important;
+    }
+}
 
 .link-arrow-wrap {
     display: flex;
@@ -79,5 +116,12 @@
         & path {
             fill: currentColor;
         }
+    }
+
+    &:after {
+        content: "\e904";
+        font-family: 'icomoon' !important;
+        font-size: 0.8em;
+        font-weight: 400;
     }
 }

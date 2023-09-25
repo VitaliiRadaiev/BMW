@@ -1,0 +1,45 @@
+.type-of-works {
+    @media (min-width: 768px) {
+        padding: 8rem 0;
+        background-color: #E7E7E7;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 2rem;
+
+        @media (max-width: $md2+px) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media (max-width: $md3+px) {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+.type-of-works-card {
+    border: 1px solid $textColor;
+    padding: 3rem;
+    border-radius: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+
+    &__title {
+        font-size: 2.8rem;
+        line-height: 1.18em;
+        font-weight: 400;
+        margin: 0;
+
+        @media (max-width: $md3+px) {
+            font-size: 2.4rem;
+        }
+    }
+
+    &__text {
+        color: #757575;
+        line-height: 1.5em;
+    }
+}

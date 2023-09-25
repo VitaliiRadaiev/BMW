@@ -98,11 +98,10 @@
 					</div>
 				</div>
 			</section>
-
 			<section class="models section-space">
 				<div class="container">
 					<h2>Выберите модель</h2>
-					<div class="models__list" data-slider="models">
+					<div class="models__slider" data-slider="models">
 						<div class="swiper">
 							<div class="swiper-wrapper">
 								<div class="swiper-slide">
@@ -640,13 +639,15 @@
 					<div class="services__footer space-top link-arrow-wrap">
 						<a href="#" class="link-arrow-right">
 							Все услуги
-							<img class="img-svg" src="img/icons/arrow-right.svg" alt="">
+							
 						</a>
 					</div>
 				</div>
 			</section>
 
-			@@include('components/trumpet-call/_trumpet-call.html')
+			@@include('components/trumpet-call/_trumpet-call.html', {
+				"mod": "section-space"
+			})
 
 			<section class="reviews section-space">
 				<div class="container">
@@ -735,7 +736,6 @@
 					<div class="reviews__footer space-top link-arrow-wrap">
 						<a href="#" class="link-arrow-right">
 							Все отзывы
-							<img class="img-svg" src="img/icons/arrow-right.svg" alt="">
 						</a>
 					</div>
 				</div>
@@ -789,9 +789,7 @@
 				</div>
 			</section>
 
-			<section class="map section-space">
-				<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A2db3e8ff124481e7763d3527bf4ffde0b39240367e433371b0bce6c18ac8017f&amp;source=constructor" width="100%" height="440" frameborder="0"></iframe>
-			</section>
+			@@include('components/map/_map.html')
 		</main>
 
 		@@include('components/footer/_footer.html',{})

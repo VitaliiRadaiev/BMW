@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('_head.html',{
+"title": "BMW"
+})
+
+<body>
+    <div class="_preload-body"></div>
+    <div class="main-wrapper">
+        @@include('components/header/_header.html',{
+        "mod": "header--dark"
+        })
+        <main class="_page reviews-page">
+            <div class="top-header-space"></div>
+            @@include('components/breadcrumbs/_breadcrumbs.html', {
+            "arr": ["<a href='#'>Главная</a>", "Отзывы"]
+            })
+            <section class="reviews section-space">
+				<div class="container">
+					<div class="reviews__head">
+						<h1>Отзывы</h1>
+						<img src="img/photo/Yandex.png" alt="">
+					</div>
+					<div class="reviews__body space-top">
+						<div class="review-card">
+							<div class="review-card__head">
+								<div class="review-card__photo">
+									<img src="img/photo/review-card-1.jpg" alt="">
+								</div>
+								<div>
+									<div class="review-card__name">Александр К.</div>
+									<div class="review-card__date">27.03.2023</div>
+								</div>
+							</div>
+							<div class="review-card__stars">
+								@@include('components/rating/_rating.html', { "value": "4" })
+							</div>
+							<div class="review-card__text">
+								Отличный сервис! Самое крутое - подход к клиентам Продавали авто, покупатель решил проверить в этом сервисе Я как продавец своего авто был приятно удивлён грамотной диагностики авто и притным ожиданием
+							</div>
+						</div>
+						<div class="review-card">
+							<div class="review-card__head">
+								<div class="review-card__photo">
+									<img src="img/photo/review-card-2.jpg" alt="">
+								</div>
+								<div>
+									<div class="review-card__name">Александр Лоханев</div>
+									<div class="review-card__date">26.04.2023</div>
+								</div>
+							</div>
+							<div class="review-card__stars">
+								@@include('components/rating/_rating.html', { "value": "4.5" })
+							</div>
+							<div class="review-card__text">
+								Обзвонил 3 специализированных сервиса бмв , никто не слышал про мою проблему , приехав в сервис bmwyou сразу нашли и устранили проблему , быстро , качественно и не дорого , всем владельцам бмв рекомендую 👍👍👍
+							</div>
+						</div>
+						<div class="review-card">
+							<div class="review-card__head">
+								<div class="review-card__photo">
+									<img src="img/photo/review-card-3.jpg" alt="">
+								</div>
+								<div>
+									<div class="review-card__name">
+										Геннадий Иванов
+									</div>
+									<div class="review-card__date">
+										24.10.2022
+									</div>
+								</div>
+							</div>
+							<div class="review-card__stars">
+								@@include('components/rating/_rating.html', { "value": "5" })
+							</div>
+							<div class="review-card__text">
+								Как любят шутить, что с появлением в твоей жизни машины из Баварии - ты прописываешься в сервисе. Это правда от части. Однажды приехав сюда для ремонта и дождавшись машину после него - ты рискуешь попасть в следующий раз только на плановое ТО. А к этому моменту уже соскучишься по общению с ребятами и атмосфере у них.
+							</div>
+						</div>
+						<div class="review-card">
+							<div class="review-card__head">
+								<div class="review-card__photo">
+									<img src="img/photo/review-card-4.jpg" alt="">
+								</div>
+								<div>
+									<div class="review-card__name">
+										Charlie
+									</div>
+									<div class="review-card__date">
+										27.03.2023
+									</div>
+								</div>
+							</div>
+							<div class="review-card__stars">
+								@@include('components/rating/_rating.html', { "value": "3" })
+							</div>
+							<div class="review-card__text">
+								Делал мелочь по кузову, но впечатления исключительно положительные. Ребята точно с руками и правильным подходом к делу! Ценник супер гуманный).
+							</div>
+						</div>
+						<div class="review-card">
+							<div class="review-card__head">
+								<div class="review-card__photo">
+									<img src="img/photo/review-card-1.jpg" alt="">
+								</div>
+								<div>
+									<div class="review-card__name">Александр К.</div>
+									<div class="review-card__date">27.03.2023</div>
+								</div>
+							</div>
+							<div class="review-card__stars">
+								@@include('components/rating/_rating.html', { "value": "4" })
+							</div>
+							<div class="review-card__text">
+								Отличный сервис! Самое крутое - подход к клиентам Продавали авто, покупатель решил проверить в этом сервисе Я как продавец своего авто был приятно удивлён грамотной диагностики авто и притным ожиданием
+							</div>
+						</div>
+						<div class="review-card">
+							<div class="review-card__head">
+								<div class="review-card__photo">
+									<img src="img/photo/review-card-2.jpg" alt="">
+								</div>
+								<div>
+									<div class="review-card__name">Александр Лоханев</div>
+									<div class="review-card__date">26.04.2023</div>
+								</div>
+							</div>
+							<div class="review-card__stars">
+								@@include('components/rating/_rating.html', { "value": "4.5" })
+							</div>
+							<div class="review-card__text">
+								Обзвонил 3 специализированных сервиса бмв , никто не слышал про мою проблему , приехав в сервис bmwyou сразу нашли и устранили проблему , быстро , качественно и не дорого , всем владельцам бмв рекомендую 👍👍👍
+							</div>
+						</div>
+						<div class="review-card">
+							<div class="review-card__head">
+								<div class="review-card__photo">
+									<img src="img/photo/review-card-3.jpg" alt="">
+								</div>
+								<div>
+									<div class="review-card__name">
+										Геннадий Иванов
+									</div>
+									<div class="review-card__date">
+										24.10.2022
+									</div>
+								</div>
+							</div>
+							<div class="review-card__stars">
+								@@include('components/rating/_rating.html', { "value": "5" })
+							</div>
+							<div class="review-card__text">
+								Как любят шутить, что с появлением в твоей жизни машины из Баварии - ты прописываешься в сервисе. Это правда от части. Однажды приехав сюда для ремонта и дождавшись машину после него - ты рискуешь попасть в следующий раз только на плановое ТО. А к этому моменту уже соскучишься по общению с ребятами и атмосфере у них.
+							</div>
+						</div>
+						<div class="review-card">
+							<div class="review-card__head">
+								<div class="review-card__photo">
+									<img src="img/photo/review-card-4.jpg" alt="">
+								</div>
+								<div>
+									<div class="review-card__name">
+										Charlie
+									</div>
+									<div class="review-card__date">
+										27.03.2023
+									</div>
+								</div>
+							</div>
+							<div class="review-card__stars">
+								@@include('components/rating/_rating.html', { "value": "3" })
+							</div>
+							<div class="review-card__text">
+								Делал мелочь по кузову, но впечатления исключительно положительные. Ребята точно с руками и правильным подходом к делу! Ценник супер гуманный).
+							</div>
+						</div>
+						<div class="review-card">
+							<div class="review-card__head">
+								<div class="review-card__photo">
+									<img src="img/photo/review-card-1.jpg" alt="">
+								</div>
+								<div>
+									<div class="review-card__name">Александр К.</div>
+									<div class="review-card__date">27.03.2023</div>
+								</div>
+							</div>
+							<div class="review-card__stars">
+								@@include('components/rating/_rating.html', { "value": "4" })
+							</div>
+							<div class="review-card__text">
+								Отличный сервис! Самое крутое - подход к клиентам Продавали авто, покупатель решил проверить в этом сервисе Я как продавец своего авто был приятно удивлён грамотной диагностики авто и притным ожиданием
+							</div>
+						</div>
+						<div class="review-card">
+							<div class="review-card__head">
+								<div class="review-card__photo">
+									<img src="img/photo/review-card-2.jpg" alt="">
+								</div>
+								<div>
+									<div class="review-card__name">Александр Лоханев</div>
+									<div class="review-card__date">26.04.2023</div>
+								</div>
+							</div>
+							<div class="review-card__stars">
+								@@include('components/rating/_rating.html', { "value": "4.5" })
+							</div>
+							<div class="review-card__text">
+								Обзвонил 3 специализированных сервиса бмв , никто не слышал про мою проблему , приехав в сервис bmwyou сразу нашли и устранили проблему , быстро , качественно и не дорого , всем владельцам бмв рекомендую 👍👍👍
+							</div>
+						</div>
+						<div class="review-card">
+							<div class="review-card__head">
+								<div class="review-card__photo">
+									<img src="img/photo/review-card-3.jpg" alt="">
+								</div>
+								<div>
+									<div class="review-card__name">
+										Геннадий Иванов
+									</div>
+									<div class="review-card__date">
+										24.10.2022
+									</div>
+								</div>
+							</div>
+							<div class="review-card__stars">
+								@@include('components/rating/_rating.html', { "value": "5" })
+							</div>
+							<div class="review-card__text">
+								Как любят шутить, что с появлением в твоей жизни машины из Баварии - ты прописываешься в сервисе. Это правда от части. Однажды приехав сюда для ремонта и дождавшись машину после него - ты рискуешь попасть в следующий раз только на плановое ТО. А к этому моменту уже соскучишься по общению с ребятами и атмосфере у них.
+							</div>
+						</div>
+						<div class="review-card">
+							<div class="review-card__head">
+								<div class="review-card__photo">
+									<img src="img/photo/review-card-4.jpg" alt="">
+								</div>
+								<div>
+									<div class="review-card__name">
+										Charlie
+									</div>
+									<div class="review-card__date">
+										27.03.2023
+									</div>
+								</div>
+							</div>
+							<div class="review-card__stars">
+								@@include('components/rating/_rating.html', { "value": "3" })
+							</div>
+							<div class="review-card__text">
+								Делал мелочь по кузову, но впечатления исключительно положительные. Ребята точно с руками и правильным подходом к делу! Ценник супер гуманный).
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+            <div class="section-space"></div>
+
+        </main>
+
+        @@include('components/footer/_footer.html',{})
+    </div>
+</body>
+
+</html>

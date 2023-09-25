@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>BMW</title>
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/style.css">
+	<style>
+		body.page-is-load ._preload-body {
+			opacity: 0;
+			visibility: hidden;
+		}
+
+		body.page-is-load ._preload-body:before {
+			display: none;
+		}
+
+		._preload-body {
+			background-color: #fff;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 999;
+			-webkit-transition: all .6s ease .2s;
+			-o-transition: all .6s ease .2s;
+			transition: all .6s ease .2s;
+		}
+
+		._preload-body:before {
+			position: absolute;
+			content: '';
+			z-index: 999;
+			top: 50%;
+			left: 50%;
+			height: 50px;
+			width: 50px;
+			border-radius: 50%;
+			border: 4px solid #6e6e6e;
+			border-right: 4px solid #fff;
+			-webkit-transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+			-webkit-animation: preloadBody 2s linear infinite;
+			animation: preloadBody 2s linear infinite;
+		}
+
+		@-webkit-keyframes preloadBody {
+			from {
+				-webkit-transform: translate(-50%, -50%) rotate(0);
+				transform: translate(-50%, -50%) rotate(0);
+			}
+
+			to {
+				-webkit-transform: translate(-50%, -50%) rotate(360deg);
+				transform: translate(-50%, -50%) rotate(360deg);
+			}
+		}
+
+		@keyframes preloadBody {
+			from {
+				-webkit-transform: translate(-50%, -50%) rotate(0);
+				transform: translate(-50%, -50%) rotate(0);
+			}
+
+			to {
+				-webkit-transform: translate(-50%, -50%) rotate(360deg);
+				transform: translate(-50%, -50%) rotate(360deg);
+			}
+		}
+	</style>
+
+<script>
+
+	let element = document.querySelector('html');
+	if (element) {
+		const setFontSize = () => {
+			let value = 10 / 1920 * element.clientWidth;
+			element.style.fontSize = value + 'px';
+		}
+
+		setFontSize();
+
+		window.addEventListener('resize', setFontSize);
+	}
+
+</script>
+	
+<script src="js/vendors.js"></script>
+<script src="js/app.js"></script>
+</head>
+
+<body>
+    <div class="_preload-body"></div>
+    <div class="main-wrapper">
+        <header class="header header--dark" data-header>
+    <div class="container">
+        <div class="header__body">
+            <div class="header__logo">
+                <a href="#">
+                    <img src="img/logo/logo.svg" alt="">
+                </a>
+            </div>
+
+            <nav class="header__menu menu">
+                <ul class="menu__list">
+                    <li class="menu__list-item current-menu-item">
+                        <a class="menu__link" href="#">Услуги</a>
+                    </li>
+                    <li class="menu__list-item">
+                        <a class="menu__link" href="#">Отзывы</a>
+                    </li>
+                    <li class="menu__list-item">
+                        <a class="menu__link" href="#">Блог</a>
+                    </li>
+                    <li class="menu__list-item">
+                        <a class="menu__link" href="#">Контакты</a>
+                    </li>
+                </ul>
+                <div class="menu__addrress">
+                    Москва, Северянинский <br> проезд 1, строение 1
+                </div>
+                <a href="#" class="menu__phone">+7 (495) 143-84-00</a>
+            </nav>
+
+            <div class="header__address">
+                Москва, Северянинский проезд 1, строение 1
+            </div>
+
+            <a href="#" class="header__phone">
+                <span>+7 (495) 143-84-00</span>
+                <img src="img/icons/phone.svg" alt="">
+            </a>
+
+            <div class="header__burger burger" data-toggle-menu>
+                <span class="burger__cross"></span>
+                <span class="burger__cross"></span>
+                <span class="burger__cross"></span>
+                <span class="burger__cross"></span>
+            </div>
+        </div>
+    </div>
+</header>
+        <main class="_page blog-single-page">
+            <div class="top-header-space"></div>
+            <div class="breadcrumbs-wrap container">
+    <ul class="breadcrumbs">
+         <li><a href='#'>Главная</a></li>
+             <li><a href='#'>Блог</a></li>
+             <li>Запуск проекта BMW E38 в G11LCI</li>
+            
+    </ul>
+</div>
+
+            <section class="article section-space-sm">
+                <div class="container">
+                    <div class="text-content text-secondary last">
+                        <h1>
+                            Запуск проекта BMW E38 в G11LCI
+                        </h1>
+                        <p>
+                            Здравствуйте уважаемые подписчики и гости. Хотим поделится последними новостями с нашего сервиса. Основное событие на начало данного месяца стало возобновление проекта по переделки легендарной BMW 7й серии в кузове Е38.
+                        </p>
+                        <p>
+                            А именно полное восстановление кузова данной модели а так же внедрение в нее самой передовой начинки взятой от модели последнего поколения BMW G11LCI. Причем не просто какой то мультимедиа и приборки как подумают многие, а самой полной начинки. В этот кузов мы установим силовой агрегат от G11 5.0DX B57C30 с мощностью 400hp и 760Nm коробку и раздатку. Да, мы сделаем ее полно приводной. Это будет первая Е38 с полным приводом.
+                        </p>
+                        <p>
+                            Так же будет установлена пневматическая подвеска, с активными стабилизаторами и интегральное рулевое управление с задними подруливающими колесами. Установлена вся электроника от G11LCI включая мультимеди MGU с приборной панелью BMW Live кокпит Professional. Больше скажем, будут установлены и лазерные фары в корпусе родных фар Е38. Цель работы, сохранение оригинального внешнего вида и полностью иновационная начинка внутри. Само собой будут установлены комфортные 
+                        </p>
+                        <figure>
+                            <img src="img/photo/article-img-1.jpg" alt="">
+                            <img src="img/photo/article-img-2.jpg" alt="">
+                        </figure>
+                        <p>
+                            А именно полное восстановление кузова данной модели а так же внедрение в нее самой передовой начинки взятой от модели последнего поколения BMW G11LCI. Причем не просто какой то мультимедиа и приборки как подумают многие, а самой полной начинки. В этот кузов мы установим силовой агрегат от G11 5.0DX B57C30 с мощностью 400hp и 760Nm коробку и раздатку. Да, мы сделаем ее полно приводной. Это будет первая Е38 с полным приводом.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="services section-space">
+				<div class="container">
+					<h2>Услуги</h2>
+					<div class="services__body space-top">
+						<div class="services__col-1">
+							<div class="services__list" data-spoller>
+								<div class="services__list-item">
+									<div class="services__list-top" data-spoller-trigger>
+										<div class="services__list-icon">
+											<img src="img/photo/services-icon-1.svg" alt="">
+										</div>
+										<div class="services__list-title text-xl">
+											Русификация BMW
+										</div>
+										<div class="services__list-label">NEW</div>
+										<div class="services__list-plus"></div>
+									</div>
+									<div class="services__list-body text-content">
+										<ul>
+											<li>
+												Замена масла (двигатель, АКПП, редукторы и раздаточная коробка)
+											</li>
+											<li>
+												Замена тормозных дисков и колодок
+											</li>
+											<li>
+												Замена тормозной жидкости и охлаждающей
+											</li>
+											<li>
+												Диагностика и ремонт подвески
+											</li>
+											<li>
+												Диагностика автомобиля
+											</li>
+											<li>
+												Мойка радиаторов
+											</li>
+											<li>
+												Компьютерная диагностика
+											</li>
+											<li>
+												Ремонт электрооборудования
+											</li>
+											<li>
+												Чистка и мойка впускного коллектора
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="services__list-item">
+									<div class="services__list-top" data-spoller-trigger>
+										<div class="services__list-icon">
+											<img src="img/photo/services-icon-2.svg" alt="">
+										</div>
+										<div class="services__list-title text-xl">
+											Дооснащение
+										</div>
+										<div class="services__list-plus"></div>
+									</div>
+									<div class="services__list-body text-content text-sm">
+										<ul>
+											<li>
+												Замена масла (двигатель, АКПП, редукторы и раздаточная коробка)
+											</li>
+											<li>
+												Замена тормозных дисков и колодок
+											</li>
+											<li>
+												Замена тормозной жидкости и охлаждающей
+											</li>
+											<li>
+												Диагностика и ремонт подвески
+											</li>
+											<li>
+												Диагностика автомобиля
+											</li>
+											<li>
+												Мойка радиаторов
+											</li>
+											<li>
+												Компьютерная диагностика
+											</li>
+											<li>
+												Ремонт электрооборудования
+											</li>
+											<li>
+												Чистка и мойка впускного коллектора
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="services__list-item">
+									<div class="services__list-top" data-spoller-trigger>
+										<div class="services__list-icon">
+											<img src="img/photo/services-icon-3.svg" alt="">
+										</div>
+										<div class="services__list-title text-xl">
+											Диагностика
+										</div>
+										<div class="services__list-plus"></div>
+									</div>
+									<div class="services__list-body text-content text-sm">
+										<ul>
+											<li>
+												Замена масла (двигатель, АКПП, редукторы и раздаточная коробка)
+											</li>
+											<li>
+												Замена тормозных дисков и колодок
+											</li>
+											<li>
+												Замена тормозной жидкости и охлаждающей
+											</li>
+											<li>
+												Диагностика и ремонт подвески
+											</li>
+											<li>
+												Диагностика автомобиля
+											</li>
+											<li>
+												Мойка радиаторов
+											</li>
+											<li>
+												Компьютерная диагностика
+											</li>
+											<li>
+												Ремонт электрооборудования
+											</li>
+											<li>
+												Чистка и мойка впускного коллектора
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="services__list-item">
+									<div class="services__list-top" data-spoller-trigger>
+										<div class="services__list-icon">
+											<img src="img/photo/services-icon-4.svg" alt="">
+										</div>
+										<div class="services__list-title text-xl">
+											Техническое обслуживание
+										</div>
+										<div class="services__list-plus"></div>
+									</div>
+									<div class="services__list-body text-content text-sm">
+										<ul>
+											<li>
+												Замена масла (двигатель, АКПП, редукторы и раздаточная коробка)
+											</li>
+											<li>
+												Замена тормозных дисков и колодок
+											</li>
+											<li>
+												Замена тормозной жидкости и охлаждающей
+											</li>
+											<li>
+												Диагностика и ремонт подвески
+											</li>
+											<li>
+												Диагностика автомобиля
+											</li>
+											<li>
+												Мойка радиаторов
+											</li>
+											<li>
+												Компьютерная диагностика
+											</li>
+											<li>
+												Ремонт электрооборудования
+											</li>
+											<li>
+												Чистка и мойка впускного коллектора
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="services__list-item">
+									<div class="services__list-top" data-spoller-trigger>
+										<div class="services__list-icon">
+											<img src="img/photo/services-icon-5.svg" alt="">
+										</div>
+										<div class="services__list-title text-xl">
+											Ремонт двигателей
+										</div>
+										<div class="services__list-plus"></div>
+									</div>
+									<div class="services__list-body text-content text-sm">
+										<ul>
+											<li>
+												Замена масла (двигатель, АКПП, редукторы и раздаточная коробка)
+											</li>
+											<li>
+												Замена тормозных дисков и колодок
+											</li>
+											<li>
+												Замена тормозной жидкости и охлаждающей
+											</li>
+											<li>
+												Диагностика и ремонт подвески
+											</li>
+											<li>
+												Диагностика автомобиля
+											</li>
+											<li>
+												Мойка радиаторов
+											</li>
+											<li>
+												Компьютерная диагностика
+											</li>
+											<li>
+												Ремонт электрооборудования
+											</li>
+											<li>
+												Чистка и мойка впускного коллектора
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="services__col-2">
+							<div class="services__list" data-spoller>
+								<div class="services__list-item">
+									<div class="services__list-top" data-spoller-trigger>
+										<div class="services__list-icon">
+											<img src="img/photo/services-icon-6.svg" alt="">
+										</div>
+										<div class="services__list-title text-xl">
+											Ремонт 
+										</div>
+										<div class="services__list-plus"></div>
+									</div>
+									<div class="services__list-body text-content text-sm">
+										<ul>
+											<li>
+												Замена масла (двигатель, АКПП, редукторы и раздаточная коробка)
+											</li>
+											<li>
+												Замена тормозных дисков и колодок
+											</li>
+											<li>
+												Замена тормозной жидкости и охлаждающей
+											</li>
+											<li>
+												Диагностика и ремонт подвески
+											</li>
+											<li>
+												Диагностика автомобиля
+											</li>
+											<li>
+												Мойка радиаторов
+											</li>
+											<li>
+												Компьютерная диагностика
+											</li>
+											<li>
+												Ремонт электрооборудования
+											</li>
+											<li>
+												Чистка и мойка впускного коллектора
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="services__list-item">
+									<div class="services__list-top" data-spoller-trigger>
+										<div class="services__list-icon">
+											<img src="img/photo/services-icon-7.svg" alt="">
+										</div>
+										<div class="services__list-title text-xl">
+											Ремонт форсунок
+										</div>
+										<div class="services__list-plus"></div>
+									</div>
+									<div class="services__list-body text-content text-sm">
+										<ul>
+											<li>
+												Замена масла (двигатель, АКПП, редукторы и раздаточная коробка)
+											</li>
+											<li>
+												Замена тормозных дисков и колодок
+											</li>
+											<li>
+												Замена тормозной жидкости и охлаждающей
+											</li>
+											<li>
+												Диагностика и ремонт подвески
+											</li>
+											<li>
+												Диагностика автомобиля
+											</li>
+											<li>
+												Мойка радиаторов
+											</li>
+											<li>
+												Компьютерная диагностика
+											</li>
+											<li>
+												Ремонт электрооборудования
+											</li>
+											<li>
+												Чистка и мойка впускного коллектора
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="services__list-item">
+									<div class="services__list-top" data-spoller-trigger>
+										<div class="services__list-icon">
+											<img src="img/photo/services-icon-8.svg" alt="">
+										</div>
+										<div class="services__list-title text-xl">
+											Ремонт ГУР
+										</div>
+										<div class="services__list-plus"></div>
+									</div>
+									<div class="services__list-body text-content text-sm">
+										<ul>
+											<li>
+												Замена масла (двигатель, АКПП, редукторы и раздаточная коробка)
+											</li>
+											<li>
+												Замена тормозных дисков и колодок
+											</li>
+											<li>
+												Замена тормозной жидкости и охлаждающей
+											</li>
+											<li>
+												Диагностика и ремонт подвески
+											</li>
+											<li>
+												Диагностика автомобиля
+											</li>
+											<li>
+												Мойка радиаторов
+											</li>
+											<li>
+												Компьютерная диагностика
+											</li>
+											<li>
+												Ремонт электрооборудования
+											</li>
+											<li>
+												Чистка и мойка впускного коллектора
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="services__list-item">
+									<div class="services__list-top" data-spoller-trigger>
+										<div class="services__list-icon">
+											<img src="img/photo/services-icon-9.svg" alt="">
+										</div>
+										<div class="services__list-title text-xl">
+											Ремонт фар и фонарей
+										</div>
+										<div class="services__list-plus"></div>
+									</div>
+									<div class="services__list-body text-content text-sm">
+										<ul>
+											<li>
+												Замена масла (двигатель, АКПП, редукторы и раздаточная коробка)
+											</li>
+											<li>
+												Замена тормозных дисков и колодок
+											</li>
+											<li>
+												Замена тормозной жидкости и охлаждающей
+											</li>
+											<li>
+												Диагностика и ремонт подвески
+											</li>
+											<li>
+												Диагностика автомобиля
+											</li>
+											<li>
+												Мойка радиаторов
+											</li>
+											<li>
+												Компьютерная диагностика
+											</li>
+											<li>
+												Ремонт электрооборудования
+											</li>
+											<li>
+												Чистка и мойка впускного коллектора
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="services__list-item">
+									<div class="services__list-top" data-spoller-trigger>
+										<div class="services__list-icon">
+											<img src="img/photo/services-icon-10.svg" alt="">
+										</div>
+										<div class="services__list-title text-xl">
+											Ремонт АБС
+										</div>
+										<div class="services__list-plus"></div>
+									</div>
+									<div class="services__list-body text-content text-sm">
+										<ul>
+											<li>
+												Замена масла (двигатель, АКПП, редукторы и раздаточная коробка)
+											</li>
+											<li>
+												Замена тормозных дисков и колодок
+											</li>
+											<li>
+												Замена тормозной жидкости и охлаждающей
+											</li>
+											<li>
+												Диагностика и ремонт подвески
+											</li>
+											<li>
+												Диагностика автомобиля
+											</li>
+											<li>
+												Мойка радиаторов
+											</li>
+											<li>
+												Компьютерная диагностика
+											</li>
+											<li>
+												Ремонт электрооборудования
+											</li>
+											<li>
+												Чистка и мойка впускного коллектора
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="services__footer space-top link-arrow-wrap">
+						<a href="#" class="link-arrow-right">
+							Все услуги
+							
+						</a>
+					</div>
+				</div>
+			</section>
+
+            <section class="models section-space">
+				<div class="container">
+					<h2>Выберите модель</h2>
+                    <div class="models__text text-secondary text-content last">
+                        <p>
+                            Вы можете выбрать модель вашего автомобиля из указанных ниже и ознакомиться с подробными ценами на ремонт и техническое обслуживание данных моделей.
+                        </p>
+                    </div> 
+					<div class="models__slider">
+						<div class="swiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<a href="#" class="model-card">
+										<img src="img/photo/model-card-1.jpg" alt="">
+										<span class="model-card__label">BMW 1</span>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="#" class="model-card">
+										<img src="img/photo/model-card-2.jpg" alt="">
+										<span class="model-card__label">BMW X3</span>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="#" class="model-card">
+										<img src="img/photo/model-card-3.jpg" alt="">
+										<span class="model-card__label">BMW 2</span>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="#" class="model-card">
+										<img src="img/photo/model-card-4.jpg" alt="">
+										<span class="model-card__label">BMW X4</span>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="#" class="model-card">
+										<img src="img/photo/model-card-5.jpg" alt="">
+										<span class="model-card__label">BMW 3</span>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="#" class="model-card">
+										<img src="img/photo/model-card-6.jpg" alt="">
+										<span class="model-card__label">BMW X5</span>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="#" class="model-card">
+										<img src="img/photo/model-card-7.jpg" alt="">
+										<span class="model-card__label">BMW 4</span>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="#" class="model-card">
+										<img src="img/photo/model-card-8.jpg" alt="">
+										<span class="model-card__label">BMW X6</span>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="#" class="model-card">
+										<img src="img/photo/model-card-9.jpg" alt="">
+										<span class="model-card__label">BMW 5</span>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="#" class="model-card">
+										<img src="img/photo/model-card-10.jpg" alt="">
+										<span class="model-card__label">BMW X7</span>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="#" class="model-card">
+										<img src="img/photo/model-card-1.jpg" alt="">
+										<span class="model-card__label">BMW 1</span>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="#" class="model-card">
+										<img src="img/photo/model-card-2.jpg" alt="">
+										<span class="model-card__label">BMW X3</span>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="#" class="model-card">
+										<img src="img/photo/model-card-3.jpg" alt="">
+										<span class="model-card__label">BMW 2</span>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="#" class="model-card">
+										<img src="img/photo/model-card-4.jpg" alt="">
+										<span class="model-card__label">BMW X4</span>
+									</a>
+								</div>
+                                <div class="swiper-slide">
+									<a href="#" class="model-card">
+										<img src="img/photo/model-card-1.jpg" alt="">
+										<span class="model-card__label">BMW 1</span>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="#" class="model-card">
+										<img src="img/photo/model-card-2.jpg" alt="">
+										<span class="model-card__label">BMW X3</span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="models__buttons space-top">
+							<button class="models__slider-btn left">
+								<img class="img-svg" src="img/icons/arrow-left.svg" alt="">
+							</button>
+							<button class="models__slider-btn right">
+								<img class="img-svg" src="img/icons/arrow-right.svg" alt="">
+							</button>
+						</div>
+					</div>
+				</div>
+			</section>
+
+            <section class="advantages section-space">
+                <div class="container">
+                    <h2>Почему стоит выбрать нас?</h2>
+                    <ul class="advantages__list space-top">
+                        <li>
+                            <div class="advantages__icon">
+                                <img src="img/photo/advantages-icon-1.svg" alt="">
+                            </div>
+                            <div class="advantages__title">
+                                Гарантия на работы 12 месяцев
+                            </div>
+                            <div class="advantages__text text-content last text-secondary">
+                                <p>
+                                    На все наши работы по ремонту и дооснащению, а также на установленное оборудование, предоставляется годовая гарантия сроком на 12 месяцев.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="advantages__icon">
+                                <img src="img/photo/advantages-icon-2.svg" alt="">
+                            </div>
+                            <div class="advantages__title">
+                                Работаем с автомобилями BMW с 2014 года
+                            </div>
+                            <div class="advantages__text text-content last text-secondary">
+                                <p>
+                                    Мы специализируемся и работаем с автомобилями BMW с 2014 года, а значит имеем большой практический опыт за плечами и знаем своё дело.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="advantages__icon">
+                                <img src="img/photo/advantages-icon-3.svg" alt="">
+                            </div>
+                            <div class="advantages__title">
+                                Сохранение заводской гарантии
+                            </div>
+                            <div class="advantages__text text-content last text-secondary">
+                                <p>
+                                    После проведения нами работ по обслуживанию, ремонту или дооснащению автомобиля, у вас полностью сохраняется заводская гарантия от производителя.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="advantages__icon">
+                                <img src="img/photo/advantages-icon-4.svg" alt="">
+                            </div>
+                            <div class="advantages__title">
+                                Скидки на комплексные работы
+                            </div>
+                            <div class="advantages__text text-content last text-secondary">
+                                <p>
+                                    Если вы заказываете большой комплекс работ по обслуживанию или дооснащению вашего автомобиля, мы предоставляем вам скидку.
+                                </p>
+                            </div>  
+                        </li>
+                        <li>
+                            <div class="advantages__icon">
+                                <img src="img/photo/advantages-icon-5.svg" alt="">
+                            </div>
+                            <div class="advantages__title">
+                                Большинство машин обслуживается за день
+                            </div>
+                            <div class="advantages__text text-content last text-secondary">
+                                <p>
+                                    Большая часть предоставляемых услуг оказывается в течение одного рабочего дня. Поэтому вы можете оставить свой автомобиль утром и забрать уже вечером.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="advantages__icon">
+                                <img src="img/photo/advantages-icon-6.svg" alt="">
+                            </div>
+                            <div class="advantages__title">
+                                Собственный склад автозапчастей
+                            </div>
+                            <div class="advantages__text text-content last text-secondary">
+                                <p>
+                                    Наиболее часто используемые запасные части и детали для автомобилей мы имеем в наличии в нашем автосервисе, поэтому вам не придётся ждать их доставки.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="map section-space">
+    <!-- <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A2db3e8ff124481e7763d3527bf4ffde0b39240367e433371b0bce6c18ac8017f&amp;source=constructor" width="100%" height="440" frameborder="0"></iframe> -->
+</section>
+
+        </main>
+
+        <footer class="footer">
+    <div class="container">
+        <div class="footer__body">
+            <div class="footer__logo">
+                <a href="#">
+                    <img src="img/logo/logo.svg" alt="">
+                </a>
+            </div>
+            <ul class="footer__menu">
+                <li>
+                    <a href="#">Услуги</a>
+                </li>
+                <li>
+                    <a href="#">Отзывы</a>
+                </li>
+                <li>
+                    <a href="#">Блог</a>
+                </li>
+            </ul>
+            <div class="footer__info">
+                <div class="footer__address">
+                    Москва, Северянинский проезд 1, строение 1
+                </div>
+                <a href="#" class="footer__phone">
+                    +7 (495) 143-84-00
+                </a>
+            </div>
+            <div class="footer__social">
+                <ul class="socila">
+                    <li>
+                        <a href="#">
+                            <img class="img-svg" src="img/icons/icon_social_vk.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img class="img-svg" src="img/icons/icon_social_youtube.svg" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+    </div>
+</body>
+
+</html>

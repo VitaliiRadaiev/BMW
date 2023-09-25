@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>BMW</title>
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/style.css">
+	<style>
+		body.page-is-load ._preload-body {
+			opacity: 0;
+			visibility: hidden;
+		}
+
+		body.page-is-load ._preload-body:before {
+			display: none;
+		}
+
+		._preload-body {
+			background-color: #fff;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 999;
+			-webkit-transition: all .6s ease .2s;
+			-o-transition: all .6s ease .2s;
+			transition: all .6s ease .2s;
+		}
+
+		._preload-body:before {
+			position: absolute;
+			content: '';
+			z-index: 999;
+			top: 50%;
+			left: 50%;
+			height: 50px;
+			width: 50px;
+			border-radius: 50%;
+			border: 4px solid #6e6e6e;
+			border-right: 4px solid #fff;
+			-webkit-transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+			-webkit-animation: preloadBody 2s linear infinite;
+			animation: preloadBody 2s linear infinite;
+		}
+
+		@-webkit-keyframes preloadBody {
+			from {
+				-webkit-transform: translate(-50%, -50%) rotate(0);
+				transform: translate(-50%, -50%) rotate(0);
+			}
+
+			to {
+				-webkit-transform: translate(-50%, -50%) rotate(360deg);
+				transform: translate(-50%, -50%) rotate(360deg);
+			}
+		}
+
+		@keyframes preloadBody {
+			from {
+				-webkit-transform: translate(-50%, -50%) rotate(0);
+				transform: translate(-50%, -50%) rotate(0);
+			}
+
+			to {
+				-webkit-transform: translate(-50%, -50%) rotate(360deg);
+				transform: translate(-50%, -50%) rotate(360deg);
+			}
+		}
+	</style>
+
+<script>
+
+	let element = document.querySelector('html');
+	if (element) {
+		const setFontSize = () => {
+			let value = 10 / 1920 * element.clientWidth;
+			element.style.fontSize = value + 'px';
+		}
+
+		setFontSize();
+
+		window.addEventListener('resize', setFontSize);
+	}
+
+</script>
+	
+<script src="js/vendors.js"></script>
+<script src="js/app.js"></script>
+</head>
+
+<body>
+    <div class="_preload-body"></div>
+    <div class="main-wrapper">
+        <header class="header header--dark" data-header>
+    <div class="container">
+        <div class="header__body">
+            <div class="header__logo">
+                <a href="#">
+                    <img src="img/logo/logo.svg" alt="">
+                </a>
+            </div>
+
+            <nav class="header__menu menu">
+                <ul class="menu__list">
+                    <li class="menu__list-item current-menu-item">
+                        <a class="menu__link" href="#">Услуги</a>
+                    </li>
+                    <li class="menu__list-item">
+                        <a class="menu__link" href="#">Отзывы</a>
+                    </li>
+                    <li class="menu__list-item">
+                        <a class="menu__link" href="#">Блог</a>
+                    </li>
+                    <li class="menu__list-item">
+                        <a class="menu__link" href="#">Контакты</a>
+                    </li>
+                </ul>
+                <div class="menu__addrress">
+                    Москва, Северянинский <br> проезд 1, строение 1
+                </div>
+                <a href="#" class="menu__phone">+7 (495) 143-84-00</a>
+            </nav>
+
+            <div class="header__address">
+                Москва, Северянинский проезд 1, строение 1
+            </div>
+
+            <a href="#" class="header__phone">
+                <span>+7 (495) 143-84-00</span>
+                <img src="img/icons/phone.svg" alt="">
+            </a>
+
+            <div class="header__burger burger" data-toggle-menu>
+                <span class="burger__cross"></span>
+                <span class="burger__cross"></span>
+                <span class="burger__cross"></span>
+                <span class="burger__cross"></span>
+            </div>
+        </div>
+    </div>
+</header>
+        <main class="_page contacts-page">
+            <div class="top-header-space"></div>
+            <div class="breadcrumbs-wrap container">
+    <ul class="breadcrumbs">
+         <li><a href='#'>Главная</a></li>
+             <li>Контакты</li>
+            
+    </ul>
+</div>
+
+            <section class="contacts section-space-sm">
+                <div class="container">
+                    <h1>Контакты</h1>
+                    <div class="contacts__body">
+                        <div class="contacts__col-1">
+                            <div class="contacts__logo">
+                                Bmw you
+                            </div>
+                            <ul class="contacts__list">
+                                <li>
+                                    <div class="contacts__list-label">
+                                        <img src="img/icons/contact-icon-phone.svg" alt="">
+                                        Телефон
+                                    </div>
+                                    <div class="contacts__list-data">
+                                        <a href="#">+7 (495) 143-84-00</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="contacts__list-label">
+                                        <img src="img/icons/contact-icon-calendar.svg" alt="">
+                                        Часы работы
+                                    </div>
+                                    <div class="contacts__list-data">
+                                        ежедневно, 11:00–21:00
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="contacts__list-label">
+                                        <img src="img/icons/contact-icon-pin.svg" alt="">
+                                        Адрес
+                                    </div>
+                                    <div class="contacts__list-data">
+                                        Северянинский пр., 1, стр. 1, Москва
+                                        <span>(Заезд в ворота справа после жд переезда)</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="contacts__list-label">
+                                        <img src="img/icons/contact-icon-comments.svg" alt="">
+                                        Соц. сети
+                                    </div>
+                                    <div class="contacts__list-data">
+                                        <ul class="social-v2">
+                                            <li>
+                                                <a href="#">
+                                                    <img class="img-svg" src="img/icons/icon_social_vk_dark.svg" alt="">
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <img class="img-svg" src="img/icons/icon_social_telegram_dark.svg" alt="">
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <img class="img-svg" src="img/icons/icon_social_youtube_dark.svg" alt="">
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="contacts__col-2">
+                            <div class="gallery-secondary section-space">
+                                <div class="gallery-secondary__item">
+                                    <a href="img/photo/gallery-secondary-img-lg-1.jpg" data-fancybox="gallery-2">
+                                        <img src="img/photo/gallery-secondary-img-1.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="gallery-secondary__item">
+                                    <a href="img/photo/gallery-secondary-img-lg-2.jpg" data-fancybox="gallery-2">
+                                        <img src="img/photo/gallery-secondary-img-2.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="gallery-secondary__item">
+                                    <a href="img/photo/gallery-secondary-img-lg-3.jpg" data-fancybox="gallery-2">
+                                        <img src="img/photo/gallery-secondary-img-3.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="gallery-secondary__item">
+                                    <a href="img/photo/gallery-secondary-img-lg-4.jpg" data-fancybox="gallery-2">
+                                        <img src="img/photo/gallery-secondary-img-4.jpg" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="about section-space">
+                <div class="container">
+                    <h2>О нас</h2>
+                    <div class="space-top text-content text-md text-secondary last">
+                        <p>
+                            Наш автосервис «FGSEVER» с 2014 года занимается дооснащением, тюнингом, кодированием, ремонтом и техническим обслуживанием (ТО) автомобилей BMW (БМВ) в Москве. Мы специализируемся на этих автомобилях и сами являемся поклонниками этой немецкой марки. Благодаря тому, что через наши стены каждый день проходит множество автомобилей, наши специалисты обладают большим опытом работы с ними и являются одними из лучших в своей области.
+                        </p>
+                        <p>
+                            Мы стараемся не просто работать по шаблону, а подходить индивидуально и творчески к решению проблем каждого нашего клиента. Мы понимаем, что у каждого владельца автомобиля свои предпочтения и потребности. Поэтому мы всегда стараемся выслушать ваши пожелания и предложить вам то, что поможет сделать автомобиль комфортнее, удобнее и безопаснее именно для вас.
+                        </p>
+                        <p>
+                            Перед работами мы стараемся проконсультировать и ответить на все вопросы, возникающие у наших клиентов. Поэтому не стесняйтесь задавать вопросы, мы с радостью на них ответим. На случай, если вы хотите сделать со своим автомобилем что-то особенное — мы также берём в работу такие сложные и уникальные проекты, как например восстановление кузова E38 и внедрение в него начинки от G11 LCI. Поэтому рекомендуем вам смело обращаться в наш автосервис, мы вместе подберём или придумаем решение, которое полностью закроет ваши потребности.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="map section-space">
+    <!-- <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A2db3e8ff124481e7763d3527bf4ffde0b39240367e433371b0bce6c18ac8017f&amp;source=constructor" width="100%" height="440" frameborder="0"></iframe> -->
+</section>
+        </main>
+
+        <footer class="footer">
+    <div class="container">
+        <div class="footer__body">
+            <div class="footer__logo">
+                <a href="#">
+                    <img src="img/logo/logo.svg" alt="">
+                </a>
+            </div>
+            <ul class="footer__menu">
+                <li>
+                    <a href="#">Услуги</a>
+                </li>
+                <li>
+                    <a href="#">Отзывы</a>
+                </li>
+                <li>
+                    <a href="#">Блог</a>
+                </li>
+            </ul>
+            <div class="footer__info">
+                <div class="footer__address">
+                    Москва, Северянинский проезд 1, строение 1
+                </div>
+                <a href="#" class="footer__phone">
+                    +7 (495) 143-84-00
+                </a>
+            </div>
+            <div class="footer__social">
+                <ul class="socila">
+                    <li>
+                        <a href="#">
+                            <img class="img-svg" src="img/icons/icon_social_vk.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img class="img-svg" src="img/icons/icon_social_youtube.svg" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('_head.html',{
+"title": "BMW"
+})
+
+<body>
+    <div class="_preload-body"></div>
+    <div class="main-wrapper">
+        @@include('components/header/_header.html',{
+        "mod": "header--dark"
+        })
+        <main class="_page contacts-page">
+            <div class="top-header-space"></div>
+            @@include('components/breadcrumbs/_breadcrumbs.html', {
+            "arr": ["<a href='#'>Главная</a>", "Контакты"]
+            })
+
+            <section class="contacts section-space-sm">
+                <div class="container">
+                    <h1>Контакты</h1>
+                    <div class="contacts__body">
+                        <div class="contacts__col-1">
+                            <div class="contacts__logo">
+                                Bmw you
+                            </div>
+                            <ul class="contacts__list">
+                                <li>
+                                    <div class="contacts__list-label">
+                                        <img src="img/icons/contact-icon-phone.svg" alt="">
+                                        Телефон
+                                    </div>
+                                    <div class="contacts__list-data">
+                                        <a href="#">+7 (495) 143-84-00</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="contacts__list-label">
+                                        <img src="img/icons/contact-icon-calendar.svg" alt="">
+                                        Часы работы
+                                    </div>
+                                    <div class="contacts__list-data">
+                                        ежедневно, 11:00–21:00
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="contacts__list-label">
+                                        <img src="img/icons/contact-icon-pin.svg" alt="">
+                                        Адрес
+                                    </div>
+                                    <div class="contacts__list-data">
+                                        Северянинский пр., 1, стр. 1, Москва
+                                        <span>(Заезд в ворота справа после жд переезда)</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="contacts__list-label">
+                                        <img src="img/icons/contact-icon-comments.svg" alt="">
+                                        Соц. сети
+                                    </div>
+                                    <div class="contacts__list-data">
+                                        <ul class="social-v2">
+                                            <li>
+                                                <a href="#">
+                                                    <img class="img-svg" src="img/icons/icon_social_vk_dark.svg" alt="">
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <img class="img-svg" src="img/icons/icon_social_telegram_dark.svg" alt="">
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <img class="img-svg" src="img/icons/icon_social_youtube_dark.svg" alt="">
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="contacts__col-2">
+                            <div class="gallery-secondary section-space">
+                                <div class="gallery-secondary__item">
+                                    <a href="img/photo/gallery-secondary-img-lg-1.jpg" data-fancybox="gallery-2">
+                                        <img src="img/photo/gallery-secondary-img-1.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="gallery-secondary__item">
+                                    <a href="img/photo/gallery-secondary-img-lg-2.jpg" data-fancybox="gallery-2">
+                                        <img src="img/photo/gallery-secondary-img-2.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="gallery-secondary__item">
+                                    <a href="img/photo/gallery-secondary-img-lg-3.jpg" data-fancybox="gallery-2">
+                                        <img src="img/photo/gallery-secondary-img-3.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="gallery-secondary__item">
+                                    <a href="img/photo/gallery-secondary-img-lg-4.jpg" data-fancybox="gallery-2">
+                                        <img src="img/photo/gallery-secondary-img-4.jpg" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="about section-space">
+                <div class="container">
+                    <h2>О нас</h2>
+                    <div class="space-top text-content text-md text-secondary last">
+                        <p>
+                            Наш автосервис «FGSEVER» с 2014 года занимается дооснащением, тюнингом, кодированием, ремонтом и техническим обслуживанием (ТО) автомобилей BMW (БМВ) в Москве. Мы специализируемся на этих автомобилях и сами являемся поклонниками этой немецкой марки. Благодаря тому, что через наши стены каждый день проходит множество автомобилей, наши специалисты обладают большим опытом работы с ними и являются одними из лучших в своей области.
+                        </p>
+                        <p>
+                            Мы стараемся не просто работать по шаблону, а подходить индивидуально и творчески к решению проблем каждого нашего клиента. Мы понимаем, что у каждого владельца автомобиля свои предпочтения и потребности. Поэтому мы всегда стараемся выслушать ваши пожелания и предложить вам то, что поможет сделать автомобиль комфортнее, удобнее и безопаснее именно для вас.
+                        </p>
+                        <p>
+                            Перед работами мы стараемся проконсультировать и ответить на все вопросы, возникающие у наших клиентов. Поэтому не стесняйтесь задавать вопросы, мы с радостью на них ответим. На случай, если вы хотите сделать со своим автомобилем что-то особенное — мы также берём в работу такие сложные и уникальные проекты, как например восстановление кузова E38 и внедрение в него начинки от G11 LCI. Поэтому рекомендуем вам смело обращаться в наш автосервис, мы вместе подберём или придумаем решение, которое полностью закроет ваши потребности.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            @@include('components/map/_map.html')
+        </main>
+
+        @@include('components/footer/_footer.html',{})
+    </div>
+</body>
+
+</html>

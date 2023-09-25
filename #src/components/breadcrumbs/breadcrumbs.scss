@@ -1,26 +1,37 @@
+.breadcrumbs-wrap {
+    margin-top: 6rem;
+
+    @media (max-width: $md3+px) {
+        margin-top: 3rem;
+    }
+}
 .breadcrumbs {
     padding-left: 0;
-    padding-top: 5rem;
-    margin-bottom: 6.4rem;
     display: flex;
     flex-wrap: wrap;
     font-weight: 400;
-    font-size: 1.2rem;
-    line-height: 1.5em;
-    color: $textColorSecondary;
+    font-size: 2rem;
+    line-height: 1.4em;
+    color: #9a9a9a;
+    gap: 1rem;
+
+    @media (max-width: $md3+px) {
+        font-size: 1.6rem;
+    }
 
     & > li {
         &:not(:last-child) {
-            &:after {
-                content: '/';
-                margin-left: 0.5rem;
-                margin-right: 0.5rem;
+            &::after {
+                font-family: "icomoon" !important;
+                content: "\e904";
+                font-size: 0.7em;
+                margin-left: 1rem;
             }
         }
     }
 
     & a {
-        color: $textColor;
-        transition: all .3s ease;
+        color: inherit;
+        transition: color 0.2s ease;
     }
 }

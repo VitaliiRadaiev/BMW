@@ -98,6 +98,17 @@
                 gap: 3.4rem;
             }
         }
+
+        & h2 {
+            font-size: 6.8rem;
+            font-weight: 600;
+            line-height: 1.18em;
+
+            @media (max-width: $md3+px) {
+                font-size: 4rem;
+                font-weight: 700;
+            }
+        }
     }
 
     &__slider-bottom {
@@ -118,4 +129,3 @@
         }
     }
 }
-

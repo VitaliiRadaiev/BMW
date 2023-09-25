@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>BMW</title>
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/style.css">
+	<style>
+		body.page-is-load ._preload-body {
+			opacity: 0;
+			visibility: hidden;
+		}
+
+		body.page-is-load ._preload-body:before {
+			display: none;
+		}
+
+		._preload-body {
+			background-color: #fff;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 999;
+			-webkit-transition: all .6s ease .2s;
+			-o-transition: all .6s ease .2s;
+			transition: all .6s ease .2s;
+		}
+
+		._preload-body:before {
+			position: absolute;
+			content: '';
+			z-index: 999;
+			top: 50%;
+			left: 50%;
+			height: 50px;
+			width: 50px;
+			border-radius: 50%;
+			border: 4px solid #6e6e6e;
+			border-right: 4px solid #fff;
+			-webkit-transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+			-webkit-animation: preloadBody 2s linear infinite;
+			animation: preloadBody 2s linear infinite;
+		}
+
+		@-webkit-keyframes preloadBody {
+			from {
+				-webkit-transform: translate(-50%, -50%) rotate(0);
+				transform: translate(-50%, -50%) rotate(0);
+			}
+
+			to {
+				-webkit-transform: translate(-50%, -50%) rotate(360deg);
+				transform: translate(-50%, -50%) rotate(360deg);
+			}
+		}
+
+		@keyframes preloadBody {
+			from {
+				-webkit-transform: translate(-50%, -50%) rotate(0);
+				transform: translate(-50%, -50%) rotate(0);
+			}
+
+			to {
+				-webkit-transform: translate(-50%, -50%) rotate(360deg);
+				transform: translate(-50%, -50%) rotate(360deg);
+			}
+		}
+	</style>
+
+<script>
+
+	let element = document.querySelector('html');
+	if (element) {
+		const setFontSize = () => {
+			let value = 10 / 1920 * element.clientWidth;
+			element.style.fontSize = value + 'px';
+		}
+
+		setFontSize();
+
+		window.addEventListener('resize', setFontSize);
+	}
+
+</script>
+	
+<script src="js/vendors.js"></script>
+<script src="js/app.js"></script>
+</head>
+
+<body>
+	<div class="_preload-body"></div>
+	<div class="main-wrapper">
+		<header class="header header--dark" data-header>
+    <div class="container">
+        <div class="header__body">
+            <div class="header__logo">
+                <a href="#">
+                    <img src="img/logo/logo.svg" alt="">
+                </a>
+            </div>
+
+            <nav class="header__menu menu">
+                <ul class="menu__list">
+                    <li class="menu__list-item current-menu-item">
+                        <a class="menu__link" href="#">Услуги</a>
+                    </li>
+                    <li class="menu__list-item">
+                        <a class="menu__link" href="#">Отзывы</a>
+                    </li>
+                    <li class="menu__list-item">
+                        <a class="menu__link" href="#">Блог</a>
+                    </li>
+                    <li class="menu__list-item">
+                        <a class="menu__link" href="#">Контакты</a>
+                    </li>
+                </ul>
+                <div class="menu__addrress">
+                    Москва, Северянинский <br> проезд 1, строение 1
+                </div>
+                <a href="#" class="menu__phone">+7 (495) 143-84-00</a>
+            </nav>
+
+            <div class="header__address">
+                Москва, Северянинский проезд 1, строение 1
+            </div>
+
+            <a href="#" class="header__phone">
+                <span>+7 (495) 143-84-00</span>
+                <img src="img/icons/phone.svg" alt="">
+            </a>
+
+            <div class="header__burger burger" data-toggle-menu>
+                <span class="burger__cross"></span>
+                <span class="burger__cross"></span>
+                <span class="burger__cross"></span>
+                <span class="burger__cross"></span>
+            </div>
+        </div>
+    </div>
+</header> 
+		<main class="_page services-page">
+            <div class="top-header-space"></div>
+            <div class="breadcrumbs-wrap container">
+    <ul class="breadcrumbs">
+         <li><a href='#'>Главная</a></li>
+             <li>Услуги</li>
+            
+    </ul>
+</div>
+			<section class="services section-space-md">
+				<div class="container">
+					<h2>Услуги</h2>
+					<div class="services__body space-top">
+						<div class="services__col-1">
+							<div class="services__list" data-spoller>
+								<div class="services__list-item">
+									<div class="services__list-top" data-spoller-trigger>
+										<div class="services__list-icon">
+											<img src="img/photo/services-icon-1.svg" alt="">
+										</div>
+										<div class="services__list-title text-xl">
+											Русификация BMW
+										</div>
+										<div class="services__list-label">NEW</div>
+										<div class="services__list-plus"></div>
+									</div>
+									<div class="services__list-body text-content">
+										<ul>
+											<li>
+												Замена масла (двигатель, АКПП, редукторы и раздаточная коробка)
+											</li>
+											<li>
+												Замена тормозных дисков и колодок
+											</li>
+											<li>
+												Замена тормозной жидкости и охлаждающей
+											</li>
+											<li>
+												Диагностика и ремонт подвески
+											</li>
+											<li>
+												Диагностика автомобиля
+											</li>
+											<li>
+												Мойка радиаторов
+											</li>
+											<li>
+												Компьютерная диагностика
+											</li>
+											<li>
+												Ремонт электрооборудования
+											</li>
+											<li>
+												Чистка и мойка впускного коллектора
+											</li>
+										</ul>
+									</div>
+								</div>
+                                <div class="services__list-item">
+									<div class="services__list-top" data-spoller-trigger>
+										<div class="services__list-icon">
+											<img src="img/photo/services-icon-6.svg" alt="">
+										</div>
+										<div class="services__list-title text-xl">
+											Ремонт 
+										</div>
+										<div class="services__list-plus"></div>
+									</div>
+									<div class="services__list-body text-content text-sm">
+										<ul>
+											<li>
+												Замена масла (двигатель, АКПП, редукторы и раздаточная коробка)
+											</li>
+											<li>
+												Замена тормозных дисков и колодок
+											</li>
+											<li>
+												Замена тормозной жидкости и охлаждающей
+											</li>
+											<li>
+												Диагностика и ремонт подвески
+											</li>
+											<li>
+												Диагностика автомобиля
+											</li>
+											<li>
+												Мойка радиаторов
+											</li>
+											<li>
+												Компьютерная диагностика
+											</li>
+											<li>
+												Ремонт электрооборудования
+											</li>
+											<li>
+												Чистка и мойка впускного коллектора
+											</li>
+										</ul>
+									</div>
+								</div>
+                                <div class="services__list-item">
+									<div class="services__list-top" data-spoller-trigger>
+										<div class="services__list-icon">
+											<img src="img/photo/services-icon-5.svg" alt="">
+										</div>
+										<div class="services__list-title text-xl">
+											Ремонт двигателей
+										</div>
+										<div class="services__list-plus"></div>
+									</div>
+									<div class="services__list-body text-content text-sm">
+										<ul>
+											<li>
+												Замена масла (двигатель, АКПП, редукторы и раздаточная коробка)
+											</li>
+											<li>
+												Замена тормозных дисков и колодок
+											</li>
+											<li>
+												Замена тормозной жидкости и охлаждающей
+											</li>
+											<li>
+												Диагностика и ремонт подвески
+											</li>
+											<li>
+												Диагностика автомобиля
+											</li>
+											<li>
+												Мойка радиаторов
+											</li>
+											<li>
+												Компьютерная диагностика
+											</li>
+											<li>
+												Ремонт электрооборудования
+											</li>
+											<li>
+												Чистка и мойка впускного коллектора
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="services__list-item">
+									<div class="services__list-top" data-spoller-trigger>
+										<div class="services__list-icon">
+											<img src="img/photo/services-icon-11.svg" alt="">
+										</div>
+										<div class="services__list-title text-xl">
+											Кузовной ремонт
+										</div>
+										<div class="services__list-plus"></div>
+									</div>
+									<div class="services__list-body text-content text-sm">
+										<ul>
+											<li>
+												Замена масла (двигатель, АКПП, редукторы и раздаточная коробка)
+											</li>
+											<li>
+												Замена тормозных дисков и колодок
+											</li>
+											<li>
+												Замена тормозной жидкости и охлаждающей
+											</li>
+											<li>
+												Диагностика и ремонт подвески
+											</li>
+											<li>
+												Диагностика автомобиля
+											</li>
+											<li>
+												Мойка радиаторов
+											</li>
+											<li>
+												Компьютерная диагностика
+											</li>
+											<li>
+												Ремонт электрооборудования
+											</li>
+											<li>
+												Чистка и мойка впускного коллектора
+											</li>
+										</ul>
+									</div>
+								</div>
+                                <div class="services__list-item">
+									<div class="services__list-top" data-spoller-trigger>
+										<div class="services__list-icon">
+											<img src="img/photo/services-icon-6.svg" alt="">
+										</div>
+										<div class="services__list-title text-xl">
+											Ремонт 
+										</div>
+										<div class="services__list-plus"></div>
+									</div>
+									<div class="services__list-body text-content text-sm">
+										<ul>
+											<li>
+												Замена масла (двигатель, АКПП, редукторы и раздаточная коробка)
+											</li>
+											<li>
+												Замена тормозных дисков и колодок
+											</li>
+											<li>
+												Замена тормозной жидкости и охлаждающей
+											</li>
+											<li>
+												Диагностика и ремонт подвески
+											</li>
+											<li>
+												Диагностика автомобиля
+											</li>
+											<li>
+												Мойка радиаторов
+											</li>
+											<li>
+												Компьютерная диагностика
+											</li>
+											<li>
+												Ремонт электрооборудования
+											</li>
+											<li>
+												Чистка и мойка впускного коллектора
+											</li>
+										</ul>
+									</div>
+								</div>
+                                <div class="services__list-item">
+									<div class="services__list-top" data-spoller-trigger>
+										<div class="services__list-icon">
+											<img src="img/photo/services-icon-7.svg" alt="">
+										</div>
+										<div class="services__list-title text-xl">
+											Ремонт форсунок
+										</div>
+										<div class="services__list-plus"></div>
+									</div>
+									<div class="services__list-body text-content text-sm">
+										<ul>
+											<li>
+												Замена масла (двигатель, АКПП, редукторы и раздаточная коробка)
+											</li>
+											<li>
+												Замена тормозных дисков и колодок
+											</li>
+											<li>
+												Замена тормозной жидкости и охлаждающей
+											</li>
+											<li>
+												Диагностика и ремонт подвески
+											</li>
+											<li>
+												Диагностика автомобиля
+											</li>
+											<li>
+												Мойка радиаторов
+											</li>
+											<li>
+												Компьютерная диагностика
+											</li>
+											<li>
+												Ремонт электрооборудования
+											</li>
+											<li>
+												Чистка и мойка впускного коллектора
+											</li>
+										</ul>
+									</div>
+								</div>
+                                <div class="services__list-item">
+									<div class="services__list-top" data-spoller-trigger>
+										<div class="services__list-icon">
+											<img src="img/photo/services-icon-9.svg" alt="">
+										</div>
+										<div class="services__list-title text-xl">
+											Ремонт фар и фонарей
+										</div>
+										<div class="services__list-plus"></div>
+									</div>
+									<div class="services__list-body text-content text-sm">
+										<ul>
+											<li>
+												Замена масла (двигатель, АКПП, редукторы и раздаточная коробка)
+											</li>
+											<li>
+												Замена тормозных дисков и колодок
+											</li>
+											<li>
+												Замена тормозной жидкости и охлаждающей
+											</li>
+											<li>
+												Диагностика и ремонт подвески
+											</li>
+											<li>
+												Диагностика автомобиля
+											</li>
+											<li>
+												Мойка радиаторов
+											</li>
+											<li>
+												Компьютерная диагностика
+											</li>
+											<li>
+												Ремонт электрооборудования
+											</li>
+											<li>
+												Чистка и мойка впускного коллектора
+											</li>
+										</ul>
+									</div>
+								</div>
+                                <div class="services__list-item">
+									<div class="services__list-top" data-spoller-trigger>
+										<div class="services__list-icon">
+											<img src="img/photo/services-icon-11.svg" alt="">
+										</div>
+										<div class="services__list-title text-xl">
+											Кодирование опций
+										</div>
+										<div class="services__list-plus"></div>
+									</div>
+									<div class="services__list-body text-content text-sm">
+										<ul>
+											<li>
+												Замена масла (двигатель, АКПП, редукторы и раздаточная коробка)
+											</li>
+											<li>
+												Замена тормозных дисков и колодок
+											</li>
+											<li>
+												Замена тормозной жидкости и охлаждающей
+											</li>
+											<li>
+												Диагностика и ремонт подвески
+											</li>
+											<li>
+												Диагностика автомобиля
+											</li>
+											<li>
+												Мойка радиаторов
+											</li>
+											<li>
+												Компьютерная диагностика
+											</li>
+											<li>
+												Ремонт электрооборудования
+											</li>
+											<li>
+												Чистка и мойка впускного коллектора
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="services__col-2">
+							<div class="services__list" data-spoller>
+                                <div class="services__list-item">
+									<div class="services__list-top" data-spoller-trigger>
+										<div class="services__list-icon">
+											<img src="img/photo/services-icon-2.svg" alt="">
+										</div>
+										<div class="services__list-title text-xl">
+											Дооснащение
+										</div>
+										<div class="services__list-plus"></div>
+									</div>
+									<div class="services__list-body text-content text-sm">
+										<ul>
+											<li>
+												Замена масла (двигатель, АКПП, редукторы и раздаточная коробка)
+											</li>
+											<li>
+												Замена тормозных дисков и колодок
+											</li>
+											<li>
+												Замена тормозной жидкости и охлаждающей
+											</li>
+											<li>
+												Диагностика и ремонт подвески
+											</li>
+											<li>
+												Диагностика автомобиля
+											</li>
+											<li>
+												Мойка радиаторов
+											</li>
+											<li>
+												Компьютерная диагностика
+											</li>
+											<li>
+												Ремонт электрооборудования
+											</li>
+											<li>
+												Чистка и мойка впускного коллектора
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="services__list-item">
+									<div class="services__list-top" data-spoller-trigger>
+										<div class="services__list-icon">
+											<img src="img/photo/services-icon-4.svg" alt="">
+										</div>
+										<div class="services__list-title text-xl">
+											Техническое обслуживание
+										</div>
+										<div class="services__list-plus"></div>
+									</div>
+									<div class="services__list-body text-content text-sm">
+										<ul>
+											<li>
+												Замена масла (двигатель, АКПП, редукторы и раздаточная коробка)
+											</li>
+											<li>
+												Замена тормозных дисков и колодок
+											</li>
+											<li>
+												Замена тормозной жидкости и охлаждающей
+											</li>
+											<li>
+												Диагностика и ремонт подвески
+											</li>
+											<li>
+												Диагностика автомобиля
+											</li>
+											<li>
+												Мойка радиаторов
+											</li>
+											<li>
+												Компьютерная диагностика
+											</li>
+											<li>
+												Ремонт электрооборудования
+											</li>
+											<li>
+												Чистка и мойка впускного коллектора
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="services__list-item">
+									<div class="services__list-top" data-spoller-trigger>
+										<div class="services__list-icon">
+											<img src="img/photo/services-icon-5.svg" alt="">
+										</div>
+										<div class="services__list-title text-xl">
+											Диагностика и заправка кондиционеров
+										</div>
+										<div class="services__list-plus"></div>
+									</div>
+									<div class="services__list-body text-content text-sm">
+										<ul>
+											<li>
+												Замена масла (двигатель, АКПП, редукторы и раздаточная коробка)
+											</li>
+											<li>
+												Замена тормозных дисков и колодок
+											</li>
+											<li>
+												Замена тормозной жидкости и охлаждающей
+											</li>
+											<li>
+												Диагностика и ремонт подвески
+											</li>
+											<li>
+												Диагностика автомобиля
+											</li>
+											<li>
+												Мойка радиаторов
+											</li>
+											<li>
+												Компьютерная диагностика
+											</li>
+											<li>
+												Ремонт электрооборудования
+											</li>
+											<li>
+												Чистка и мойка впускного коллектора
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="services__list-item">
+									<div class="services__list-top" data-spoller-trigger>
+										<div class="services__list-icon">
+											<img src="img/photo/services-icon-5.svg" alt="">
+										</div>
+										<div class="services__list-title text-xl">
+											Обновление ПО и карт навигации
+										</div>
+										<div class="services__list-plus"></div>
+									</div>
+									<div class="services__list-body text-content text-sm">
+										<ul>
+											<li>
+												Замена масла (двигатель, АКПП, редукторы и раздаточная коробка)
+											</li>
+											<li>
+												Замена тормозных дисков и колодок
+											</li>
+											<li>
+												Замена тормозной жидкости и охлаждающей
+											</li>
+											<li>
+												Диагностика и ремонт подвески
+											</li>
+											<li>
+												Диагностика автомобиля
+											</li>
+											<li>
+												Мойка радиаторов
+											</li>
+											<li>
+												Компьютерная диагностика
+											</li>
+											<li>
+												Ремонт электрооборудования
+											</li>
+											<li>
+												Чистка и мойка впускного коллектора
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="services__list-item">
+									<div class="services__list-top" data-spoller-trigger>
+										<div class="services__list-icon">
+											<img src="img/photo/services-icon-7.svg" alt="">
+										</div>
+										<div class="services__list-title text-xl">
+											Ремонт электронных блоков
+										</div>
+										<div class="services__list-plus"></div>
+									</div>
+									<div class="services__list-body text-content text-sm">
+										<ul>
+											<li>
+												Замена масла (двигатель, АКПП, редукторы и раздаточная коробка)
+											</li>
+											<li>
+												Замена тормозных дисков и колодок
+											</li>
+											<li>
+												Замена тормозной жидкости и охлаждающей
+											</li>
+											<li>
+												Диагностика и ремонт подвески
+											</li>
+											<li>
+												Диагностика автомобиля
+											</li>
+											<li>
+												Мойка радиаторов
+											</li>
+											<li>
+												Компьютерная диагностика
+											</li>
+											<li>
+												Ремонт электрооборудования
+											</li>
+											<li>
+												Чистка и мойка впускного коллектора
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="services__list-item">
+									<div class="services__list-top" data-spoller-trigger>
+										<div class="services__list-icon">
+											<img src="img/photo/services-icon-8.svg" alt="">
+										</div>
+										<div class="services__list-title text-xl">
+											Ремонт ГУР
+										</div>
+										<div class="services__list-plus"></div>
+									</div>
+									<div class="services__list-body text-content text-sm">
+										<ul>
+											<li>
+												Замена масла (двигатель, АКПП, редукторы и раздаточная коробка)
+											</li>
+											<li>
+												Замена тормозных дисков и колодок
+											</li>
+											<li>
+												Замена тормозной жидкости и охлаждающей
+											</li>
+											<li>
+												Диагностика и ремонт подвески
+											</li>
+											<li>
+												Диагностика автомобиля
+											</li>
+											<li>
+												Мойка радиаторов
+											</li>
+											<li>
+												Компьютерная диагностика
+											</li>
+											<li>
+												Ремонт электрооборудования
+											</li>
+											<li>
+												Чистка и мойка впускного коллектора
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="services__list-item">
+									<div class="services__list-top" data-spoller-trigger>
+										<div class="services__list-icon">
+											<img src="img/photo/services-icon-10.svg" alt="">
+										</div>
+										<div class="services__list-title text-xl">
+											Ремонт АБС
+										</div>
+										<div class="services__list-plus"></div>
+									</div>
+									<div class="services__list-body text-content text-sm">
+										<ul>
+											<li>
+												Замена масла (двигатель, АКПП, редукторы и раздаточная коробка)
+											</li>
+											<li>
+												Замена тормозных дисков и колодок
+											</li>
+											<li>
+												Замена тормозной жидкости и охлаждающей
+											</li>
+											<li>
+												Диагностика и ремонт подвески
+											</li>
+											<li>
+												Диагностика автомобиля
+											</li>
+											<li>
+												Мойка радиаторов
+											</li>
+											<li>
+												Компьютерная диагностика
+											</li>
+											<li>
+												Ремонт электрооборудования
+											</li>
+											<li>
+												Чистка и мойка впускного коллектора
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+            <div class="section-space-sm"></div>
+		</main>
+
+		<footer class="footer">
+    <div class="container">
+        <div class="footer__body">
+            <div class="footer__logo">
+                <a href="#">
+                    <img src="img/logo/logo.svg" alt="">
+                </a>
+            </div>
+            <ul class="footer__menu">
+                <li>
+                    <a href="#">Услуги</a>
+                </li>
+                <li>
+                    <a href="#">Отзывы</a>
+                </li>
+                <li>
+                    <a href="#">Блог</a>
+                </li>
+            </ul>
+            <div class="footer__info">
+                <div class="footer__address">
+                    Москва, Северянинский проезд 1, строение 1
+                </div>
+                <a href="#" class="footer__phone">
+                    +7 (495) 143-84-00
+                </a>
+            </div>
+            <div class="footer__social">
+                <ul class="socila">
+                    <li>
+                        <a href="#">
+                            <img class="img-svg" src="img/icons/icon_social_vk.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img class="img-svg" src="img/icons/icon_social_youtube.svg" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+	</div>
+</body>
+
+</html>
