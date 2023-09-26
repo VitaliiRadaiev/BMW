@@ -5,7 +5,7 @@
     ymaps.ready(init);
     function init() {
 
-        let map = new ymaps.Map("map", {
+        var map = new ymaps.Map("map", {
 
             center: [55.844343, 37.674815],
             //center: [55.844308, 37.673367],
@@ -17,39 +17,50 @@
 
         map.geoObjects.add(placemark);
 
-        let placeCoordinates = [55.844308, 37.673367];
+        let placeCoordinates = [55.755814, 37.617635];
 
-                    // Выполняем запрос к сервису поиска организаций
-                    ymaps.geocode(placeCoordinates, {
-                results: 1 // Количество результатов (организаций) для отображения
-            }).then(function (res) {
-                // Получаем первую найденную организацию
-                let firstGeoObject = res.geoObjects.get(0);
-                console.log('res', res);
-                console.log('firstGeoObject', firstGeoObject);
-                console.log('text', firstGeoObject.properties.get('text'));
-                console.log('CompanyMetaData', firstGeoObject.properties.get('CompanyMetaData'));
-                // Создаем метку с полученными данными
-                let myPlacemark = new ymaps.Placemark(placeCoordinates, {
-                    // Заголовок балуна - название организации
-                    balloonContentHeader: firstGeoObject.properties.get('name'),
-                    // Содержимое балуна - адрес, телефон, часы работы
-                    balloonContentBody: [
-                        '<address>',
-                        '<strong>Адрес:</strong> ' + firstGeoObject.properties.get('text'),
-                        '<strong>Телефон:</strong> ' + firstGeoObject.properties.get('CompanyMetaData').Phones[0].formatted,
-                        '<strong>Часы работы:</strong> ' + firstGeoObject.properties.get('CompanyMetaData').Hours.text,
-                        '</address>'
-                    ].join('<br>'),
-                    // Подвал балуна
-                    balloonContentFooter: 'Дополнительная информация'
-                });
+        // Выполняем запрос к сервису поиска организаций
+        // ymaps.geocode(placeCoordinates, {
+        //     results: 1 // Количество результатов (организаций) для отображения
+        // }).then(function (res) {
+        //     // Получаем первую найденную организацию
+        //     let firstGeoObject = res.geoObjects.get(0);
+        //     console.log('res', res);
+        //     console.log('firstGeoObject', firstGeoObject);
+        //     console.log('text', firstGeoObject.properties.get('text'));
+        //     console.log('CompanyMetaData', firstGeoObject.properties.get('CompanyMetaData'));
+        //     // Создаем метку с полученными данными
+        //     let myPlacemark = new ymaps.Placemark(placeCoordinates, {
+        //         // Заголовок балуна - название организации
+        //         balloonContentHeader: firstGeoObject.properties.get('name'),
+        //         // Содержимое балуна - адрес, телефон, часы работы
+        //         balloonContentBody: [
+        //             '<address>',
+        //             '<strong>Адрес:</strong> ' + firstGeoObject.properties.get('text'),
+        //             '<strong>Телефон:</strong> ' + firstGeoObject.properties.get('CompanyMetaData').Phones[0].formatted,
+        //             '<strong>Часы работы:</strong> ' + firstGeoObject.properties.get('CompanyMetaData').Hours.text,
+        //             '</address>'
+        //         ].join('<br>'),
+        //         // Подвал балуна
+        //         balloonContentFooter: 'Дополнительная информация'
+        //     });
 
-                // Добавляем метку на карту
-                map.geoObjects.add(myPlacemark);
+        //     // Добавляем метку на карту
+        //     map.geoObjects.add(myPlacemark);
 
-                // Открываем балун при загрузке карты
-                myPlacemark.balloon.open();
-            });
+        //     // Открываем балун при загрузке карты
+        //     myPlacemark.balloon.open();
+        // });
+
+        ymaps.findOrganization('5039').then(
+            function (orgGeoObject) {
+                console.log(orgGeoObject);
+                map.geoObjects.add(orgGeoObject);
+                orgGeoObject.balloon.open();
+            },
+            function (err) {
+                // обработка ошибок
+            }
+        );
     }
 </script>
