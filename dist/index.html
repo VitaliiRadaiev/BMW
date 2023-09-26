@@ -1091,8 +1091,6 @@
     <!-- <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A2db3e8ff124481e7763d3527bf4ffde0b39240367e433371b0bce6c18ac8017f&amp;source=constructor" width="100%" height="440" frameborder="0"></iframe> -->
 </section>
 <script type="text/javascript">
-    // Функция ymaps.ready() будет вызвана, когда
-    // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
     ymaps.ready(init);
     function init() {
 
@@ -1101,12 +1099,47 @@
             center: [55.844343, 37.674815],
             //center: [55.844308, 37.673367],
             zoom: 18,
-            controls: ['trafficControl', 'geolocationControl', 'routeButtonControl', 'zoomControl', 'typeSelector', 'rulerControl']
+            //controls: ['trafficControl', 'geolocationControl', 'routeButtonControl', 'zoomControl', 'typeSelector', 'rulerControl']
         });
 
         let placemark = new ymaps.Placemark([55.844308, 37.673366], {}, {});
 
         map.geoObjects.add(placemark);
+
+        let placeCoordinates = [55.755814, 37.617635];
+
+                    // Выполняем запрос к сервису поиска организаций
+                    ymaps.geocode(placeCoordinates, {
+                results: 1 // Количество результатов (организаций) для отображения
+            }).then(function (res) {
+                // Получаем первую найденную организацию
+                let firstGeoObject = res.geoObjects.get(0);
+                console.log('res', res);
+                console.log('firstGeoObject', firstGeoObject);
+                console.log('text', firstGeoObject.properties.get('text'));
+                console.log('CompanyMetaData', firstGeoObject.properties.get('CompanyMetaData'));
+                // Создаем метку с полученными данными
+                let myPlacemark = new ymaps.Placemark(placeCoordinates, {
+                    // Заголовок балуна - название организации
+                    balloonContentHeader: firstGeoObject.properties.get('name'),
+                    // Содержимое балуна - адрес, телефон, часы работы
+                    balloonContentBody: [
+                        '<address>',
+                        '<strong>Адрес:</strong> ' + firstGeoObject.properties.get('text'),
+                        '<strong>Телефон:</strong> ' + firstGeoObject.properties.get('CompanyMetaData').Phones[0].formatted,
+                        '<strong>Часы работы:</strong> ' + firstGeoObject.properties.get('CompanyMetaData').Hours.text,
+                        '</address>'
+                    ].join('<br>'),
+                    // Подвал балуна
+                    balloonContentFooter: 'Дополнительная информация'
+                });
+
+                // Добавляем метку на карту
+                map.geoObjects.add(myPlacemark);
+
+                // Открываем балун при загрузке карты
+                myPlacemark.balloon.open();
+            });
     }
 </script>
 		</main>
