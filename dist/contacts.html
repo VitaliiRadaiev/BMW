@@ -320,13 +320,14 @@
         //     myPlacemark.balloon.open();
         // });
 
-        ymaps.findOrganization('5039').then(
+        ymaps.findOrganization('129128').then(
             function (orgGeoObject) {
                 console.log(orgGeoObject);
                 map.geoObjects.add(orgGeoObject);
                 orgGeoObject.balloon.open();
             },
             function (err) {
+                console.log(err);
                 // обработка ошибок
             }
         );
