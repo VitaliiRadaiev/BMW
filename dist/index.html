@@ -1095,36 +1095,18 @@
     // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
     ymaps.ready(init);
     function init() {
-        // Создание карты.
-        var myMap = new ymaps.Map("map", {
-            // Координаты центра карты.
-            // Порядок по умолчанию: «широта, долгота».
-            // Чтобы не определять координаты центра карты вручную,
-            // воспользуйтесь инструментом Определение координат.
+
+        let map = new ymaps.Map("map", {
+
             center: [55.844343, 37.674815],
             //center: [55.844308, 37.673367],
-            // Уровень масштабирования. Допустимые значения:
-            // от 0 (весь мир) до 19.
-            zoom: 15,
+            zoom: 18,
             controls: ['trafficControl', 'geolocationControl', 'routeButtonControl', 'zoomControl', 'typeSelector', 'rulerControl']
         });
 
-        myMap.balloon.open(myMap.getCenter(), {
-            contentHeader: 'Однажды',
-            contentBody: 'В студеную зимнюю пору' +
-                ' <span style="color:red; font-weight:bold">Я</span>' +
-                ' из лесу <b>вышел</b>',
-        });
+        let placemark = new ymaps.Placemark([55.844308, 37.673366], {}, {});
 
-        var myGeoObject = new ymaps.GeoObject({
-            geometry: {
-                type: "Point", // тип геометрии - точка
-                coordinates: [55.844308, 37.673367] // координаты точки
-            }
-        });
-
-        // Размещение геообъекта на карте.
-        myMap.geoObjects.add(myGeoObject);
+        map.geoObjects.add(placemark);
     }
 </script>
 		</main>
