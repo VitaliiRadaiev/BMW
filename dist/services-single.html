@@ -599,11 +599,11 @@
                 console.log(organizationId);
             })
 
-        ymaps.findOrganization('1124715036').then(
+        ymaps.findOrganization('224836150447').then(
             function (orgGeoObject) {
                 console.log(orgGeoObject);
-                // map.geoObjects.add(orgGeoObject);
-                // orgGeoObject.balloon.open();
+                map.geoObjects.add(orgGeoObject);
+                orgGeoObject.balloon.open();
             },
             function (err) {
                 console.log(err);
