@@ -2,6 +2,7 @@
     height: 80vh;
     min-height: 34.8rem;
     background-color: rgba($secondColor, 0.35);
+    position: relative;
 
     @media (max-width: $md3+px) {
         height: 34.8rem;
@@ -10,5 +11,211 @@
     & iframe {
         height: 100%;
         width: 100%;
+    }
+    @media (min-width: 768px) {
+        & .ymaps-2-1-79-map {
+            & .ymaps-2-1-79-controls__toolbar_left {
+                display: none;
+            }
+            & .ymaps-2-1-79-balloon-overlay {
+                & .ymaps-2-1-79-balloon {
+                    transform: translate(40%, 50%);
+                    border-radius: 16px;
+                    background-color: #fff;
+                    overflow: hidden;
+                    .ymaps-2-1-79-balloon__close {
+                        float: none;
+                        box-sizing: border-box;
+                        margin: 0;
+                        position: absolute;
+                        top: 10px;
+                        right: 10px;
+
+                        & .ymaps-2-1-79-balloon__close-button {
+                            height: 30px;
+                        }
+                    }
+
+                    & .ymaps-2-1-79-balloon__content {
+                        margin-right: 0;
+                        padding: 40px;
+
+                        & > ymaps {
+                            height: auto !important;
+                        }
+
+                        & .ymaps-2-1-79-islets_card {
+                            font-family: $mainFontFamily;
+                            color: $textColor;
+                        }
+
+                        & .ymaps-2-1-79-islets_card__title {
+                            color: $mainColor;
+                            font-size: 24px;
+                            line-height: 1.18em;
+                            font-weight: 500;
+                        }
+
+                        & .ymaps-2-1-79-islets_card__description {
+                            margin-top: 15px;
+                            font-size: 15px;
+                            line-height: 1.18em;
+                            color: #777777;
+                        }
+
+                        & .ymaps-2-1-79-islets_card__status {
+                            margin: 30px 0;
+                        }
+
+                        & .ymaps-2-1-79-islets_card__separator {
+                            display: none;
+                        }
+
+                        & .ymaps-2-1-79-islets_card__contacts {
+                            margin-top: 30px;
+                            font-size: 15px;
+                            line-height: 1.18em;
+                        }
+
+                        & .ymaps-2-1-79-islets_card__contacts-phones-item {
+                            padding: 0 0 0 38px;
+
+                            &::before {
+                                width: 18px;
+                                height: 18px;
+                                background-size: contain;
+                                top: 50%;
+                                display: block;
+                                transform: translateY(-50%);
+                            }
+                        }
+
+                        & .ymaps-2-1-79-islets_card__address {
+                            margin-top: 30px;
+                            font-size: 15px;
+                            line-height: 1.18em;
+                        }
+
+                        & .ymaps-2-1-79-islets_card__metro {
+                            margin-top: 30px;
+                            font-size: 15px;
+                            line-height: 1.18em;
+                        }
+
+                        & .ymaps-2-1-79-islets_card__metro-station {
+                            margin-top: 10px;
+                            padding-left: 38px;
+                            position: relative;
+                        }
+
+                        & .ymaps-2-1-79-islets_card__metro-station-icon {
+                            width: 18px;
+                            height: 18px;
+                            margin-right: 0;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            &::before {
+                                background-size: contain;
+                            }
+                        }
+
+                        & .ymaps-2-1-79-islets_card__business-buttons {
+                            margin-top: 30px;
+                            margin-bottom: 0;
+                            height: auto;
+                            & .ymaps-2-1-79-islets_card__route-button {
+                                height: auto;
+                                background-color: transparent;
+                                border: none;
+                                font-size: 16px;
+                                font-weight: 500;
+                                line-height: 1.14em;
+                                color: #096aff;
+                                padding: 4px 20px;
+                            }
+
+                            & .ymaps-2-1-79-islets_card__business-button {
+                                height: auto;
+                                background-color: $mainColor;
+                                border-radius: 12px;
+                                color: $lightColor !important;
+                                font-size: 16px;
+                                font-weight: 500;
+                                line-height: 1.14em;
+                                padding: 4px 20px;
+                            }
+                        }
+
+                        & .ymaps-2-1-79-islets_card__row-links {
+                            margin-top: 30px;
+                        }
+                    }
+
+                    & .ymaps-2-1-79-balloon__tail {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    &__buttons {
+        position: absolute;
+        z-index: 10;
+        top: 50%;
+        right: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        transform: translateY(-50%);
+
+        @media (max-width: $md3+px) {
+            display: none;
+        }
+    }
+
+    &__zoom-buttons {
+        border-radius: 1.2rem;
+        box-shadow: 0 2px 6px rgba(#000, 0.2);
+        background-color: #fff;
+    }
+
+    &__zoom-button {
+        height: 4rem;
+        width: 4rem;
+        background-color: #fff;
+        border-radius: 1.2rem;
+        display: flex;
+        padding: 0.8rem;
+        cursor: pointer;
+
+        & img,
+        & svg {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+        }
+    }
+
+    &__geolocation-buttons {
+        height: 4rem;
+        width: 4rem;
+        background-color: #fff;
+        border-radius: 1.2rem;
+        display: flex;
+        padding: 0.8rem;
+        box-shadow: rgba(#000, 0.2);
+        box-shadow: 0 2px 6px rgba(#000, 0.2);
+        cursor: pointer;
+
+        & img,
+        & svg {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+        }
     }
 }

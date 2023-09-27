@@ -537,29 +537,103 @@
             </section>
 
             <section id="map" class="map section-space">
-    <!-- <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A2db3e8ff124481e7763d3527bf4ffde0b39240367e433371b0bce6c18ac8017f&amp;source=constructor" width="100%" height="440" frameborder="0"></iframe> -->
+    <div class="map__buttons">
+        <div class="map__zoom-buttons">
+            <div id="mapZoomPlus" class="map__zoom-button">
+                <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M11 5.992c0-.537.448-.992 1-.992.556 0 1 .444 1 .992V11h5.008c.537 0 .992.448.992 1 0 .556-.444 1-.992 1H13v5.008c0 .537-.448.992-1 .992-.556 0-1-.444-1-.992V13H5.992C5.455 13 5 12.552 5 12c0-.556.444-1 .992-1H11V5.992z"
+                        fill="currentColor"></path>
+                </svg>
+            </div>
+            <div id="mapZoomMinus" class="map__zoom-button">
+                <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M5 12a1 1 0 0 1 1-1h12a1 1 0 1 1 0 2H6a1 1 0 0 1-1-1z" fill="currentColor"></path>
+                </svg>
+            </div>
+        </div>
+        <div id="mapGeolocation" class="map__geolocation-buttons">
+            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M2.385 12.42l16.01-7.614a.6.6 0 0 1 .8.8l-7.616 16.009a.6.6 0 0 1-1.11-.068l-2.005-6.012-6.01-2.003a.6.6 0 0 1-.069-1.111z"
+                    fill="currentColor"></path>
+            </svg>
+        </div>
+    </div>
 </section>
 <script type="text/javascript">
     ymaps.ready(init);
     function init() {
-        var map = new ymaps.Map("map", {
+        const [zoomBtnPlus, zoomBtnMinus, geolocationBtn] = [document.querySelector('#mapZoomPlus'), document.querySelector('#mapZoomMinus'), document.querySelector('#mapGeolocation')];
+        let isMob = document.documentElement.clientWidth < 768 ? true : false;
+        let center = !isMob ? [55.844281, 37.674849] : [55.844309, 37.673367];
+        let map = new ymaps.Map("map", {
 
-            center: [55.844306, 37.673364],
+            center: center,
             zoom: 18,
-            controls: ['trafficControl', 'geolocationControl', 'zoomControl', 'fullscreenControl']
+            controls: !isMob ? ['geolocationControl', 'trafficControl', 'fullscreenControl'] : ['geolocationControl', 'zoomControl', 'trafficControl', 'fullscreenControl']
         });
+
+        let placemark = new ymaps.Placemark([55.844309, 37.673367], {}, {
+            iconLayout: 'default#image',
+            iconImageHref: 'img/icons/pin.svg',
+            iconImageSize: [60, 68],
+            iconImageOffset: [-29, -64],
+        })
+
+        map.geoObjects.add(placemark);
 
         const organizationId = '224836150447';
 
         ymaps.findOrganization(organizationId).then(
             function (orgGeoObject) {
                 map.geoObjects.add(orgGeoObject);
-                orgGeoObject.balloon.open();
+                orgGeoObject.balloon.open(undefined, undefined, {
+                    autoPan: false
+                });
+                orgGeoObject.options.set('visible', false)
+                placemark.events.add('click', () => {
+                    orgGeoObject.balloon.open(undefined, undefined, {
+                        autoPan: false
+                    });
+                })
             },
             function (err) {
                 console.log(err);
             }
         );
+
+        if (zoomBtnPlus && zoomBtnMinus && geolocationBtn) {
+            let geoloc = new Promise(res => {
+                const getElement = (selector) => {
+                    let el = document.querySelector(selector);
+                    if (el) {
+                        res(el);
+                    } else {
+                        setTimeout(() => {
+                            getElement(selector);
+                        }, 300);
+                    }
+                }
+
+                getElement('.ymaps-2-1-79-float-button-icon_icon_geolocation')
+            })
+            zoomBtnPlus.addEventListener('click', () => {
+                let currentZoom = map.getZoom();
+                map.setZoom(currentZoom + 1);
+            })
+            zoomBtnMinus.addEventListener('click', () => {
+                let currentZoom = map.getZoom();
+                map.setZoom(currentZoom - 1);
+            })
+            geoloc.then(btn => {
+                geolocationBtn.addEventListener('click', () => {
+                    btn.click();
+                })
+            })
+
+        }
     }
 </script>
         </main>
